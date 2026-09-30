@@ -4,8 +4,10 @@ python -m http.server 8080
 index.html - criado 
 problema.html - criado
 impactos.html - criado 
-combate.html - 
-fontes.html
+combate.html - criado
+fontes.html - criado 
+
+<!--  DEPOIS CRIAR ESSES:  -->
 css/estilo.css
 js/interacoes.js
 imagens/
