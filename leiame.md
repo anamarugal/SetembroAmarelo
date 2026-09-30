@@ -15,6 +15,7 @@ imagens/
 <!-- Aqui fica as nossas anotações e o que cada membro fez -->
  ana criou o index.html
  
+ <!--salvar no terminal: -->
  GIT ADD .
  GIT COMMIT -M ""
  GIT PUSH
