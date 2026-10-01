@@ -15,8 +15,14 @@ imagens/
 <!-- Aqui fica as nossas anotações e o que cada membro fez -->
  ana criou os arquivos em html
  carlos editou index.html
+ ana editou o index.html
+
  
  <!--salvar no terminal: -->
  GIT ADD .
  GIT COMMIT -M ""
  GIT PUSH
+
+ <!-- ANOTAÇÕES  -->
+ 1. COlocar imagens
+ 
