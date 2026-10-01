@@ -13,7 +13,8 @@ js/interacoes.js
 imagens/
 
 <!-- Aqui fica as nossas anotações e o que cada membro fez -->
- ana criou o index.html
+ ana criou os arquivos em html
+ carlos editou index.html
  
  <!--salvar no terminal: -->
  GIT ADD .
