@@ -16,6 +16,8 @@ imagens/
  ana criou os arquivos em html
  carlos editou index.html
  ana editou o index.html
+ ana e carlos atualizaram o index.html
+ arthur procurou os temas do problemas.html
 
  
  <!--salvar no terminal: -->
@@ -25,4 +27,3 @@ imagens/
 
  <!-- ANOTAÇÕES  -->
  1. COlocar imagens
- 
