@@ -18,6 +18,7 @@ imagens/
  ana editou o index.html
  ana e carlos atualizaram o index.html
  arthur procurou os temas do problemas.html
+ joão procurou os temas do combate.html
 
  
  <!--salvar no terminal: -->
