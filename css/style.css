@@ -1,0 +1,59 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        /* Estilo da Barra de Navegação */
+        .navbar {
+            background-color: #1a1a2e;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Logotipo */
+        .logo a {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        /* Links do Menu */
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        /* Efeito ao passar o mouse */
+        .nav-links a:hover {
+            color: #00adb5;
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Link Destacado (Botão) */
+        .nav-links .btn-highlight {
+            background-color: #00adb5;
+            color: #fff;
+        }
+
+        .nav-links .btn-highlight:hover {
+            background-color: #00f5ff;
+            color: #1a1a2e;
+        }
