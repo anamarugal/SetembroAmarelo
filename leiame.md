@@ -19,6 +19,10 @@ imagens/
  ana e carlos atualizaram o index.html
  arthur procurou os temas do problemas.html
  joão procurou os temas do combate.html
+ Ana fez o documento de Back-End, do dia 07-10
+ Carlos criou o style.css
+ João leu as regras do que tinhamos que fazer
+ Carlos procurou e editou algumas páginas
 
  
  <!--salvar no terminal: -->
@@ -28,6 +32,7 @@ imagens/
 
  <!-- ANOTAÇÕES  -->
  1. COlocar imagens
+
  
 
  
