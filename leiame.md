@@ -23,7 +23,7 @@ imagens/
  Carlos criou o style.css
  João leu as regras do que tinhamos que fazer
  Carlos procurou e editou algumas páginas
-
+ Carlos editou, codigo base para o style.css
  
  <!--salvar no terminal: -->
  GIT ADD .
@@ -32,7 +32,3 @@ imagens/
 
  <!-- ANOTAÇÕES  -->
  1. COlocar imagens
-
- 
-
- 
