@@ -1,8 +1,8 @@
 /* 1. Estilo global da página */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9; /* Cor de fundo cinza clara */
-  color: #a59b6fc9;            /* Cor do texto cinza escura */
+  background-color: #f0e4b2; /* Cor de fundo cinza clara */
+  color: #000000c9;            /* Cor do texto cinza escura */
   margin: 0;
   padding: 20px;
   display: flex;
@@ -12,7 +12,7 @@ body {
 
 /* 2. Estilo do título principal */
 h1 {
-  color: #dac720;
+  color: #bbaa0d;
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
