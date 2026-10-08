@@ -1,0 +1,39 @@
+/* 1. Estilo global da página */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9; /* Cor de fundo cinza clara */
+  color: #333333;            /* Cor do texto cinza escura */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* Centraliza o conteúdo horizontalmente */
+}
+
+/* 2. Estilo do título principal */
+h1 {
+  color: #2c3e50;            /* Azul escuro */
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* 3. Estilo dos parágrafos */
+p {
+  font-size: 1.1rem;
+  line-height: 1.6;          /* Espaçamento entre linhas */
+  max-width: 600px;          /* Limita a largura do texto para melhorar a leitura */
+  text-align: center;
+}
+
+/* 4. Estilo de um link ou botão */
+a {
+  color: #3498db;            /* Azul claro */
+  text-decoration: none;     /* Remove o sublinhado padrão */
+  font-weight: bold;
+}
+
+/* Efeito ao passar o mouse no link */
+a:hover {
+  color: #2980b9;            /* Escurece o azul ao passar o mouse */
+  text-decoration: underline;
+}
