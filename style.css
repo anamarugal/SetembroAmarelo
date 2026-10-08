@@ -1,4 +1,4 @@
-/* 1. Estilo global da página */
+
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f0e4b2; /* Cor de fundo cinza clara */
@@ -36,4 +36,55 @@ a {
 a:hover {
   color: #e2d51e;            /* Escurece o azul ao passar o mouse */
   text-decoration: underline;
+}
+
+/*barra de navegação da pagina*/
+/* Configuração e fundo da barra de navegação */
+.topnav {
+    background-color: #1e1e24; /* Grafite escuro moderno para destacar o amarelo */
+    display: flex;
+    justify-content: space-between; /* Separa a logo dos links */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 0 20px;
+    height: 60px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    font-family: Arial, sans-serif;
+    border-bottom: 2px solid #ffcc00; /* Linha fina amarela na base da barra */
+}
+
+/* Estilo do título ou Logo da barra */
+.topnav .logo {
+    color: #ffcc00; /* Amarelo vibrante na logo */
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Container que guarda os links de navegação */
+.topnav-links {
+    display: flex;
+    gap: 15px; /* Espaçamento entre os links */
+}
+
+/* Estilo individual de cada link */
+.topnav-links a {
+    color: #e0e0e0; /* Branco fosco para excelente leitura sobre o fundo escuro */
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse (Hover) */
+.topnav-links a:hover {
+    background-color: #2a2a32; /* Fundo levemente mais claro */
+    color: #ffcc00; /* Texto muda para Amarelo */
+}
+
+/* Estilo para destacar o link da página atual (Ativo) */
+.topnav-links a.active {
+    background-color: #ffcc00; /* Fundo Amarelo */
+    color: #1e1e24; /* Texto escuro para manter o contraste e a leitura */
+    font-weight: bold;
 }
