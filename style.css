@@ -2,7 +2,7 @@
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f4f4f9; /* Cor de fundo cinza clara */
-  color: #333333;            /* Cor do texto cinza escura */
+  color: #a59b6fc9;            /* Cor do texto cinza escura */
   margin: 0;
   padding: 20px;
   display: flex;
@@ -12,7 +12,7 @@ body {
 
 /* 2. Estilo do título principal */
 h1 {
-  color: #2c3e50;            /* Azul escuro */
+  color: #dac720;
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
@@ -27,13 +27,13 @@ p {
 
 /* 4. Estilo de um link ou botão */
 a {
-  color: #3498db;            /* Azul claro */
+  color: #170bbd;            /* Azul claro */
   text-decoration: none;     /* Remove o sublinhado padrão */
   font-weight: bold;
 }
 
 /* Efeito ao passar o mouse no link */
 a:hover {
-  color: #2980b9;            /* Escurece o azul ao passar o mouse */
+  color: #e2d51e;            /* Escurece o azul ao passar o mouse */
   text-decoration: underline;
 }
