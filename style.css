@@ -1,93 +1,141 @@
-head {
-  background-color: #e2d51e;
+/* Cores principais */
+:root {
+  --amarelo: #ffe100;
+  --amarelo-claro: #f8f88a;
+  --rosa: #fdec00;
+  --amarelo: #facc15;
+  --fundo: #030303;
+  --texto: #020202;
+  --branco: #ffffff;
+}
+
+/* Configuração geral da página */
+* {
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #cbcbbd8a; /* Cor de fundo cinza clara */
-  color: #000000c9;            /* Cor do texto cinza escura */
+  min-height: 100vh;
   margin: 0;
-  padding: 20px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
-  align-items: center;       /* Centraliza o conteúdo horizontalmente */
+  align-items: center;
+
+  font-family: Arial, sans-serif;
+  color: var(--texto);
+  background: linear-gradient(135deg, #f5f3ff, #fce7f3);
 }
 
-/* 2. Estilo do título principal */
+/* Barra de navegação */
+.topnav {
+  width: 100%;
+  max-width: 1100px;
+  min-height: 68px;
+  padding: 12px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  background: var(--amarelo-claro);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(59, 7, 100, 0.2);
+}
+
+/* Logo */
+.topnav .logo {
+  color: var(--amarelo);
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* Links do menu */
+.topnav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.topnav-links a {
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: var(--branco);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.topnav-links a:hover {
+  background: var(--rosa);
+  color: var(--branco);
+  transform: translateY(-2px);
+}
+
+.topnav-links a.active {
+  background: var(--amarelo);
+  color: var(--amarelo-claro);
+}
+
+/* Conteúdo principal */
+main {
+  width: 100%;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 36px;
+  background: var(--branco);
+  border: 1px solid #eadcff;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(59, 7, 100, 0.1);
+}
+
+/* Título */
 h1 {
-  color: #d7cc00;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-/* 3. Estilo dos parágrafos */
-p {
-  font-size: 1.1rem;
-  line-height: 1.6;          /* Espaçamento entre linhas */
-  max-width: 600px;          /* Limita a largura do texto para melhorar a leitura */
+  margin: 0 0 16px;
+  color: var(--roxo);
+  font-size: clamp(2rem, 5vw, 3rem);
   text-align: center;
 }
 
-/* 4. Estilo de um link ou botão */
-a {
-  color: #000000;            /* Azul claro */
-  text-decoration: none;     /* Remove o sublinhado padrão */
-  font-weight: bold;
+/* Parágrafos */
+p {
+  max-width: 680px;
+  margin: 0 auto 18px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: center;
 }
 
-/* Efeito ao passar o mouse no link */
-a:hover {
-  color: #e2d51e;            /* Escurece o azul ao passar o mouse */
-  text-decoration: underline;
+/* Links no conteúdo */
+main a {
+  color: var(--roxo);
+  font-weight: 700;
 }
 
-/*barra de navegação da pagina*/
-/* Configuração e fundo da barra de navegação */
-.topnav {
-    background-color: #1e1e24; /* Grafite escuro moderno para destacar o amarelo */
-    display: flex;
-    justify-content: space-between; /* Separa a logo dos links */
-    align-items: center; /* Centraliza verticalmente */
-    padding: 0 20px;
-    height: 60px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Sombra suave */
-    font-family: Arial, sans-serif;
-    border-bottom: 2px solid #423605; /* Linha fina amarela na base da barra */
+main a:hover {
+  color: var(--rosa);
 }
 
-/* Estilo do título ou Logo da barra */
-.topnav .logo {
-    color: #ffcc00; /* Amarelo vibrante na logo */
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-}
+/* Telas pequenas */
+@media (max-width: 600px) {
+  body {
+    padding: 14px;
+  }
 
-/* Container que guarda os links de navegação */
-.topnav-links {
-    display: flex;
-    gap: 15px; /* Espaçamento entre os links */
-}
+  .topnav {
+    flex-direction: column;
+    justify-content: center;
+  }
 
-/* Estilo individual de cada link */
-.topnav-links a {
-    color: #e0e0e0; /* Branco fosco para excelente leitura sobre o fundo escuro */
-    text-decoration: none;
-    font-size: 16px;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: all 0.3s ease; /* Transição suave ao passar o mouse */
-}
+  .topnav-links {
+    justify-content: center;
+  }
 
-/* Efeito ao passar o mouse (Hover) */
-.topnav-links a:hover {
-    background-color: #2a2a32; /* Fundo levemente mais claro */
-    color: #ffcc00; /* Texto muda para Amarelo */
-}
-
-/* Estilo para destacar o link da página atual (Ativo) */
-.topnav-links a.active {
-    background-color: #ffcc00; /* Fundo Amarelo */
-    color: #1e1e24; /* Texto escuro para manter o contraste e a leitura */
-    font-weight: bold;
+  main {
+    margin-top: 28px;
+    padding: 24px 18px;
+  }
 }
