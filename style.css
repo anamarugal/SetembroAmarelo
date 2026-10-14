@@ -1,7 +1,10 @@
+head {
+  background-color: #e2d51e;
+}
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #dbb108; /* Cor de fundo cinza clara */
+  background-color: #cbcbbd8a; /* Cor de fundo cinza clara */
   color: #000000c9;            /* Cor do texto cinza escura */
   margin: 0;
   padding: 20px;
@@ -12,7 +15,7 @@ body {
 
 /* 2. Estilo do título principal */
 h1 {
-  color: #f3ff83;
+  color: #d7cc00;
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
