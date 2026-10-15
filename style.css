@@ -156,6 +156,7 @@ footer p {
 
 
 /* PROBLEMAS.HTML:  */
+
 /* Reset e configurações gerais */
 * {
     margin: 0;
@@ -189,7 +190,7 @@ h1 {
     box-shadow: 0 6px 18px rgba(251, 192, 45, 0.25);
 }
 
-/* Menu de Navegação (<nav>) */
+/* Menu de Navegação (<nav> e <ul>) */
 nav {
     background-color: #fffde7;
     border: 1px solid #fff59d;
@@ -209,7 +210,8 @@ nav ul {
     margin: 0;
 }
 
-nav a {
+/* Estilo aplicado diretamente nas tags <a> da nav */
+nav ul a {
     color: #2c2c2c;
     text-decoration: none;
     font-weight: 600;
@@ -219,13 +221,13 @@ nav a {
     display: inline-block;
 }
 
-nav a:hover {
+nav ul a:hover {
     background-color: #fbc02d;
     color: #ffffff;
     transform: translateY(-2px);
 }
 
-/* Títulos Secundários (H2) com detalhe amarelo delicado */
+/* Títulos Secundários (H2) */
 h2 {
     color: #1a1a1a;
     margin-top: 35px;
@@ -253,7 +255,7 @@ p {
     font-size: 1.05rem;
 }
 
-/* Cartões de lista para o texto (Como surge) */
+/* Cartões de lista do conteúdo */
 .cards-lista {
     list-style: none;
     padding: 0;
