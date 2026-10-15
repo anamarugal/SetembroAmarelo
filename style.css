@@ -7,39 +7,41 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #ffffff; /* Fundo principal Branco */
+    color: #1a1a1a; /* Texto em tom de preto/cinza bem escuro */
     line-height: 1.6;
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Título Principal */
+/* Cabeçalho Principal (Amarelo) */
 h1 {
-    color: #ffcc00;
+    background-color: #ffcc00; /* Fundo Amarelo */
+    color: #1a1a1a; /* Texto Preto */
     text-align: center;
-    padding: 20px 0;
+    padding: 25px 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 2.2rem;
-    border-bottom: 3px solid #ffda5f;
+    border-radius: 8px 8px 0 0;
+    border-bottom: 4px solid #ff7700; /* Linha de destaque Laranja */
 }
 
-/* Menu de Navegação */
+/* Menu de Navegação (Laranja) */
 .topnav {
-    background-color: #ffdf51;
+    background-color: #ff7700; /* Fundo Laranja */
     overflow: hidden;
-    border-radius: 8px;
-    margin: 25px 0 35px 0;
+    border-radius: 0 0 8px 8px;
+    margin-bottom: 35px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
 }
 
 .topnav a {
-    color: #ffffff;
+    color: #ffffff; /* Texto Branco no menu */
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
@@ -49,24 +51,24 @@ h1 {
 }
 
 .topnav a:hover {
-    background-color: #ffcc00;
-    color: #121212;
+    background-color: #ffcc00; /* Fica Amarelo ao passar o mouse */
+    color: #1a1a1a; /* Texto muda para Preto */
 }
 
 /* Títulos Secundários */
 h2 {
-    color: #ffcc00;
+    color: #d84315; /* Laranja escuro para destacar sobre o fundo branco */
     margin-top: 30px;
     margin-bottom: 15px;
-    font-size: 1.5rem;
-    border-left: 4px solid #ffe042;
+    font-size: 1.6rem;
+    border-left: 5px solid #ffcc00; /* Detalhe lateral em Amarelo */
     padding-left: 12px;
 }
 
 /* Parágrafos */
 p {
     margin-bottom: 15px;
-    color: #e0e0e0;
+    color: #2c2c2c; /* Texto escuro legível */
     font-size: 1.05rem;
 }
 
@@ -78,16 +80,34 @@ ul {
 }
 
 ul li {
-    background-color: #1e1e1e;
+    background-color: #fff9e6; /* Fundo suave levemente amarelado */
     margin-bottom: 10px;
     padding: 12px 18px;
     border-radius: 6px;
-    border-left: 3px solid #ffcc00;
-    color: #ffffff;
-    transition: transform 0.2s, border-left-color 0.2s;
+    border-left: 4px solid #ff7700; /* Bordas laterais em Laranja */
+    color: #1a1a1a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 ul li:hover {
-    transform: translateX
+    transform: translateX(5px);
+    background-color: #ffeaa7; /* Amarelo mais vívido ao passar o mouse */
+}
 
-    }
+/* Links dentro das listas */
+ul li a {
+    color: #d84315; /* Laranja escuro */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    color: #000000; /* Preto ao passar o mouse */
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 40px;
+    padding: 20px;
