@@ -1,141 +1,93 @@
-/* Cores principais */
-:root {
-  --amarelo: #ffe100;
-  --amarelo-claro: #f8f88a;
-  --rosa: #fdec00;
-  --amarelo: #facc15;
-  --fundo: #030303;
-  --texto: #020202;
-  --branco: #ffffff;
-}
-
-/* Configuração geral da página */
+/* Reset e configurações gerais */
 * {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  min-height: 100vh;
-  margin: 0;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  font-family: Arial, sans-serif;
-  color: var(--texto);
-  background: linear-gradient(135deg, #f5f3ff, #fce7f3);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Barra de navegação */
-.topnav {
-  width: 100%;
-  max-width: 1100px;
-  min-height: 68px;
-  padding: 12px 22px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-
-  background: var(--amarelo-claro);
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(59, 7, 100, 0.2);
-}
-
-/* Logo */
-.topnav .logo {
-  color: var(--amarelo);
-  font-size: 1.3rem;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-/* Links do menu */
-.topnav-links {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.topnav-links a {
-  padding: 10px 14px;
-  border-radius: 10px;
-  color: var(--branco);
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
-}
-
-.topnav-links a:hover {
-  background: var(--rosa);
-  color: var(--branco);
-  transform: translateY(-2px);
-}
-
-.topnav-links a.active {
-  background: var(--amarelo);
-  color: var(--amarelo-claro);
-}
-
-/* Conteúdo principal */
-main {
-  width: 100%;
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 36px;
-  background: var(--branco);
-  border: 1px solid #eadcff;
-  border-radius: 20px;
-  box-shadow: 0 12px 35px rgba(59, 7, 100, 0.1);
-}
-
-/* Título */
+/* Título Principal */
 h1 {
-  margin: 0 0 16px;
-  color: var(--roxo);
-  font-size: clamp(2rem, 5vw, 3rem);
-  text-align: center;
+    color: #ffcc00;
+    text-align: center;
+    padding: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2.2rem;
+    border-bottom: 3px solid #ff7700;
+}
+
+/* Menu de Navegação */
+.topnav {
+    background-color: #ff7700;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 25px 0 35px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.topnav a {
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.topnav a:hover {
+    background-color: #ffcc00;
+    color: #121212;
+}
+
+/* Títulos Secundários */
+h2 {
+    color: #ffcc00;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    border-left: 4px solid #ff7700;
+    padding-left: 12px;
 }
 
 /* Parágrafos */
 p {
-  max-width: 680px;
-  margin: 0 auto 18px;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  text-align: center;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+    font-size: 1.05rem;
 }
 
-/* Links no conteúdo */
-main a {
-  color: var(--roxo);
-  font-weight: 700;
+/* Listas */
+ul {
+    list-style-type: none;
+    margin-bottom: 25px;
+    padding-left: 0;
 }
 
-main a:hover {
-  color: var(--rosa);
+ul li {
+    background-color: #1e1e1e;
+    margin-bottom: 10px;
+    padding: 12px 18px;
+    border-radius: 6px;
+    border-left: 3px solid #ffcc00;
+    color: #ffffff;
+    transition: transform 0.2s, border-left-color 0.2s;
 }
 
-/* Telas pequenas */
-@media (max-width: 600px) {
-  body {
-    padding: 14px;
-  }
+ul li:hover {
+    transform: translateX
 
-  .topnav {
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .topnav-links {
-    justify-content: center;
-  }
-
-  main {
-    margin-top: 28px;
-    padding: 24px 18px;
-  }
-}
+    }
