@@ -7,108 +7,149 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #ffffff; /* Fundo principal Branco */
-    color: #1a1a1a; /* Texto em tom de preto/cinza bem escuro */
-    line-height: 1.6;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.7;
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Cabeçalho Principal (Amarelo) */
+/* Título Principal (H1) - Detalhado e com Sombra */
 h1 {
-    background-color: #ffcc00; /* Fundo Amarelo */
-    color: #1a1a1a; /* Texto Preto */
+    background: linear-gradient(135deg, #fff176, #fbc02d);
+    color: #1c1c1c;
     text-align: center;
-    padding: 25px 15px;
+    padding: 30px 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 2.2rem;
-    border-radius: 8px 8px 0 0;
-    border-bottom: 4px solid #ff7700; /* Linha de destaque Laranja */
+    font-size: 2.3rem;
+    font-weight: 800;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    
+    /* Sombras no texto e no bloco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(251, 192, 45, 0.3);
 }
 
-/* Menu de Navegação (Laranja) */
-.topnav {
-    background-color: #ff7700; /* Fundo Laranja */
-    overflow: hidden;
-    border-radius: 0 0 8px 8px;
+/* Menu de Navegação (<nav>) */
+nav {
+    background-color: #fffde7;
+    border: 1px solid #fff59d;
+    border-radius: 10px;
     margin-bottom: 35px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+nav ul {
+    list-style: none;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+    gap: 8px;
+    padding: 0;
+    margin: 0;
 }
 
-.topnav a {
-    color: #ffffff; /* Texto Branco no menu */
-    text-align: center;
-    padding: 14px 20px;
+nav a {
+    color: #2c2c2c;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: background-color 0.3s, color 0.3s;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
 }
 
-.topnav a:hover {
-    background-color: #ffcc00; /* Fica Amarelo ao passar o mouse */
-    color: #1a1a1a; /* Texto muda para Preto */
+nav a:hover {
+    background-color: #fbc02d;
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
-/* Títulos Secundários */
+/* Títulos Secundários (H2) */
 h2 {
-    color: #d84315; /* Laranja escuro para destacar sobre o fundo branco */
-    margin-top: 30px;
+    color: #1a1a1a;
+    margin-top: 35px;
     margin-bottom: 15px;
-    font-size: 1.6rem;
-    border-left: 5px solid #ffcc00; /* Detalhe lateral em Amarelo */
-    padding-left: 12px;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #fbc02d;
+    border-radius: 2px;
 }
 
 /* Parágrafos */
 p {
-    margin-bottom: 15px;
-    color: #2c2c2c; /* Texto escuro legível */
+    margin-bottom: 16px;
+    color: #333333;
     font-size: 1.05rem;
 }
 
-/* Listas */
+/* Listas Gerais */
 ul {
-    list-style-type: none;
+    list-style: none;
     margin-bottom: 25px;
     padding-left: 0;
 }
 
-ul li {
-    background-color: #fff9e6; /* Fundo suave levemente amarelado */
-    margin-bottom: 10px;
-    padding: 12px 18px;
-    border-radius: 6px;
-    border-left: 4px solid #ff7700; /* Bordas laterais em Laranja */
-    color: #1a1a1a;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s, background-color 0.2s;
-}
-
-ul li:hover {
-    transform: translateX(5px);
-    background-color: #ffeaa7; /* Amarelo mais vívido ao passar o mouse */
-}
-
-/* Links dentro das listas */
+/* Links das outras páginas */
 ul li a {
-    color: #d84315; /* Laranja escuro */
+    display: block;
+    background-color: #fafafa;
+    color: #2c2c2c;
+    padding: 14px 20px;
+    border-radius: 8px;
+    border: 1px solid #ececec;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
 }
 
 ul li a:hover {
-    color: #000000; /* Preto ao passar o mouse */
-    text-decoration: underline;
+    background-color: #fffde7;
+    border-color: #fff59d;
+    color: #000000;
+    transform: translateX(5px);
+}
+
+/* Estilização para os Integrantes da Equipe */
+ul li:not(:has(a)) {
+    background-color: #fffde7;
+    border: 1px solid #fff59d;
+    color: #1a1a1a;
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-block;
+    margin-right: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
 }
 
 /* Rodapé */
 footer {
-    margin-top: 40px;
-    padding: 20px; 
-  }
+    margin-top: 50px;
+    padding: 25px;
+    background-color: #fffde7;
+    text-align: center;
+    border-top: 2px solid #fbc02d;
+    border-radius: 10px;
+}
+
+footer p {
+    color: #555555;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
