@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site - Contato</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <div class="topnav">
+  <a href="index.html">Principal</a>
+  <a href="problema.html">Problemas</a>
+  <a href="fontes.html">Fontes</a>
+  <a href="combate.html">Combate</a>
+  <a href="impactos.html">Impactos</a>
+  <a href="contato.html">Contato</a>
+    </div>
+    
+    <main>
+        <h1>Fale Conosco</h1>
+        <p>Preencha os campos abaixo para nos enviar uma mensagem.</p>
+
+        <!-- ESTRUTURA DO FORMULÁRIO -->
+        <form action="#" method="POST" class="formulario-contato">
+            
+            <div class="campo">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="seu-email@exemplo.com" required>
+            </div>
+
+            <div class="campo">
+                <label for="mensagem">Sua Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Como podemos te ajudar?" required></textarea>
+            </div>
+
+            <button type="submit" class="botao-enviar">Enviar Mensagem</button>
+
+        </form>
+    </main>
+
+</body>
+</html>
