@@ -24,6 +24,11 @@ imagens/
  João leu as regras do que tinhamos que fazer
  Carlos procurou e editou algumas páginas
  Carlos editou, codigo base para o style.css
+ Ana editou/melhorou o css do codigo/geral
+ joão/Arthur, fizeram pesquisa sobre impactos.html
+ Carlos passou pesquisa para codigo html, impactos.html
+ Carlos criou pagina de contato.html
+ ana formatou/adaptou codigo html por completo para introdução do ccs
  
  <!--salvar no terminal: -->
  GIT ADD .
