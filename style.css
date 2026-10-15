@@ -28,9 +28,7 @@ h1 {
     border-radius: 12px;
     margin-bottom: 25px;
     
-    /* Sombras no texto e no bloco */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    box-shadow: 0 8px 20px rgba(251, 192, 45, 0.3);
+  
 }
 
 /* Menu de Navegação (<nav>) */
