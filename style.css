@@ -155,8 +155,10 @@ footer p {
 }
 
 
-/* PROBLEMAS.HTML:  */
 
+
+
+/* PROBLEMAS.HTML:  */
 /* Reset e configurações gerais */
 * {
     margin: 0;
@@ -256,6 +258,165 @@ p {
 }
 
 /* Cartões de lista do conteúdo */
+.cards-lista {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.cards-lista li {
+    background-color: #fffde7;
+    border: 1px solid #fff59d;
+    color: #222222;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    line-height: 1.6;
+}
+
+.cards-lista li strong {
+    color: #d84315;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 50px;
+    padding: 22px;
+    background-color: #fffde7;
+    text-align: center;
+    border-top: 2px solid #fbc02d;
+    border-radius: 10px;
+}
+
+footer p {
+    color: #555555;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+
+
+
+
+/* COMBATE.HTML  */
+/* Reset e configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Título Principal (H1) - Amarelo detalhado com Sombra */
+h1 {
+    background: linear-gradient(135deg, #fff176, #fbc02d);
+    color: #1c1c1c;
+    text-align: center;
+    padding: 25px 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 2.1rem;
+    font-weight: 800;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 18px rgba(251, 192, 45, 0.25);
+}
+
+/* Menu de Navegação (<nav> e <ul>) */
+nav {
+    background-color: #fffde7;
+    border: 1px solid #fff59d;
+    border-radius: 10px;
+    margin-bottom: 35px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul a {
+    color: #2c2c2c;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+    display: inline-block;
+}
+
+nav ul a:hover {
+    background-color: #fbc02d;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Títulos Secundários (H2) */
+h2 {
+    color: #1a1a1a;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #fbc02d;
+    border-radius: 2px;
+}
+
+/* Parágrafos */
+p {
+    margin-bottom: 16px;
+    color: #333333;
+    font-size: 1.05rem;
+}
+
+/* Bloco de destaque (para Onde Buscar Apoio) */
+.destaque-box {
+    background-color: #fffde7;
+    border: 1px solid #fff59d;
+    border-left: 5px solid #fbc02d;
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.destaque-box p {
+    margin-bottom: 10px;
+}
+
+.destaque-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Cartões de lista para tópicos */
 .cards-lista {
     list-style: none;
     padding: 0;
