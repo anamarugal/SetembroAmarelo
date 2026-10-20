@@ -68,20 +68,31 @@ if (formContato) {
 console.log("JavaScript carregado com sucesso!");
 
 // DADOS.HTML:
-const abrirDados = document.querySelector("#abrir-dados");
-const fecharDados = document.querySelector("#fechar-dados");
-const painelDados = document.querySelector("#painel-dados");
+const localDados = document.querySelector("#local-dados");
 
-if (abrirDados && fecharDados && painelDados) {
-    abrirDados.addEventListener("click", function () {
-        painelDados.hidden = false;
-        abrirDados.setAttribute("aria-expanded", "true");
-        fecharDados.focus();
-    });
+if (localDados) {
+    fetch("dados.html")
+        .then(resposta => resposta.text())
+        .then(html => {
+            localDados.innerHTML = html;
 
-    fecharDados.addEventListener("click", function () {
-        painelDados.hidden = true;
-        abrirDados.setAttribute("aria-expanded", "false");
-        abrirDados.focus();
-    });
+            const painel = document.querySelector("#painel-dados");
+            const abrir = document.querySelector("#abrir-dados");
+            const fechar = document.querySelector("#fechar-dados");
+
+            abrir.addEventListener("click", function () {
+                painel.hidden = false;
+                abrir.setAttribute("aria-expanded", "true");
+                fechar.focus();
+            });
+
+            fechar.addEventListener("click", function () {
+                painel.hidden = true;
+                abrir.setAttribute("aria-expanded", "false");
+                abrir.focus();
+            });
+        })
+        .catch(() => {
+            console.error("Não foi possível carregar dados.html.");
+        });
 }
