@@ -1,118 +1,51 @@
 
-<!DOCTYPE html>
-<html lang="pt-br">
+<!-- ABA LATERAL DO RELATO FICTÍCIO -->
+<button type="button" id="abrir-relato"
+        aria-expanded="false"
+        aria-controls="painel-relato">
+    Relato fictício
+</button>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<aside id="painel-relato" hidden>
+    <button type="button" id="fechar-relato">
+        Fechar ✕
+    </button>
 
-    <title>Relato Fictício - Valorização da Vida</title>
+    <h2>Registrar relato fictício</h2>
 
-    <link rel="stylesheet" href="style.css">
-    <script src="interacoes.js" defer></script>
-</head>
+    <p>
+        Use somente situações inventadas.
+        Nenhum dado será enviado ou armazenado.
+    </p>
 
-<body>
+    <form id="form-relato" novalidate>
+        <div class="campo">
+            <label for="categoria">Categoria:</label>
+            <select id="categoria" name="categoria" required>
+                <option value="">Selecione</option>
+                <option value="convivencia">Convivência</option>
+                <option value="ambiente-digital">Ambiente digital</option>
+                <option value="valorizacao-da-vida">Valorização da vida</option>
+            </select>
+        </div>
 
-    <header>
-        <h1>RELATO FICTÍCIO</h1>
+        <div class="campo">
+            <label for="descricao">Situação fictícia:</label>
+            <textarea id="descricao" name="descricao"
+                      rows="5" maxlength="1000" required></textarea>
+        </div>
 
-        <button type="button" id="botao-fonte"
-                aria-pressed="false">
-            Ampliar texto
+        <div class="campo">
+            <label for="sugestao-relato">Sugestão (opcional):</label>
+            <textarea id="sugestao-relato" name="sugestao"
+                      rows="3" maxlength="500"></textarea>
+        </div>
+
+        <button type="submit" class="botao-enviar">
+            Conferir relato
         </button>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Principal</a></li>
-            <li><a href="problema.html">Problemas</a></li>
-            <li><a href="combate.html">Combate</a></li>
-            <li><a href="impactos.html">Impactos</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li><a href="fontes.html">Fontes</a></li>
-            <li><a href="formuficticio.html">Relato fictício</a></li>
-        </ul>
-    </nav>
-
-    <main>
-
-        <h2>Registrar um relato de teste</h2>
-
-        <p>
-            Este formulário faz parte de um projeto escolar
-            sobre prevenção ao suicídio e valorização da vida.
-        </p>
-
-        <p>
-            <strong>Atenção:</strong> utilize somente situações
-            inventadas. Não informe nomes reais, endereços,
-            telefones ou experiências pessoais.
-            Os dados não serão enviados nem armazenados.
-        </p>
-
-        <form id="form-relato" class="formulario-contato" novalidate>
-
-            <div class="campo">
-                <label for="categoria">Categoria do relato:</label>
-
-                <select id="categoria" name="categoria" required>
-                    <option value="">Selecione uma categoria</option>
-                    <option value="convivencia">Convivência</option>
-                    <option value="ambiente-digital">Ambiente digital</option>
-                    <option value="valorizacao-da-vida">
-                        Valorização da vida
-                    </option>
-                </select>
-            </div>
-
-            <div class="campo">
-                <label for="descricao">
-                    Descreva uma situação fictícia:
-                </label>
-
-                <textarea
-                    id="descricao"
-                    name="descricao"
-                    rows="5"
-                    maxlength="1000"
-                    placeholder="Invente uma situação para testar o formulário..."
-                    required></textarea>
-
-                <small>Escreva pelo menos 20 caracteres.</small>
-            </div>
-
-            <div class="campo">
-                <label for="sugestao-relato">
-                    Sugestão de encaminhamento (opcional):
-                </label>
-
-                <textarea
-                    id="sugestao-relato"
-                    name="sugestao"
-                    rows="3"
-                    maxlength="500"
-                    placeholder="Ex.: procurar um adulto de confiança ou orientação escolar."></textarea>
-            </div>
-
-            <button type="submit" class="botao-enviar">
-                Conferir relato fictício
-            </button>
-
-            <p id="resultado-relato"
-               role="status"
-               aria-live="polite"></p>
-
-        </form>
-
-    </main>
-
-    <footer>
-        <p>
-            Projeto escolar sobre prevenção ao suicídio
-            e valorização da vida.
-        </p>
-    </footer>
-
-</body>
-</html>
+        <p id="resultado-relato" role="status"
+           aria-live="polite"></p>
+    </form>
+</aside>

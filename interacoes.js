@@ -99,44 +99,20 @@ if (localDados) {
 
 
 // FORMULARIOFIC.HTML
-const formRelato = document.querySelector("#form-relato");
+const abrirRelato = document.querySelector("#abrir-relato");
+const fecharRelato = document.querySelector("#fechar-relato");
+const painelRelato = document.querySelector("#painel-relato");
 
-if (formRelato) {
-    formRelato.addEventListener("submit", function (evento) {
-        evento.preventDefault();
+if (abrirRelato && fecharRelato && painelRelato) {
+    abrirRelato.addEventListener("click", function () {
+        painelRelato.hidden = false;
+        abrirRelato.setAttribute("aria-expanded", "true");
+        fecharRelato.focus();
+    });
 
-        const categoria = document.querySelector("#categoria");
-        const descricao = document.querySelector("#descricao");
-        const sugestao = document.querySelector("#sugestao-relato");
-        const resposta = document.querySelector("#resultado-relato");
-
-        const textoDescricao = descricao.value.trim();
-
-        if (!categoria.value) {
-            resposta.textContent = "Selecione uma categoria.";
-            categoria.focus();
-            return;
-        }
-
-        if (textoDescricao.length < 20) {
-            resposta.textContent =
-                "A descrição precisa ter pelo menos 20 caracteres.";
-            descricao.focus();
-            return;
-        }
-
-        // Objeto usado somente durante este teste.
-        const relato = {
-            categoria: categoria.value,
-            descricao: textoDescricao,
-            sugestao: sugestao.value.trim()
-        };
-
-        console.log("Relato fictício para teste:", relato);
-
-        resposta.textContent =
-            "Relato fictício validado! Nenhum dado foi enviado ou armazenado.";
-
-        formRelato.reset();
+    fecharRelato.addEventListener("click", function () {
+        painelRelato.hidden = true;
+        abrirRelato.setAttribute("aria-expanded", "false");
+        abrirRelato.focus();
     });
 }
