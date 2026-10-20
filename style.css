@@ -773,3 +773,46 @@ footer p {
     font-size: 0.95rem;
     margin-bottom: 0;
 }
+
+/* ACESSIBILIDADE: AUMENTAR O TEXTO */
+body.fonte-ampliada {
+    font-size: 1.2rem;
+}
+
+/* MANTÉM OS CAMPOS E BOTÕES RESPONSIVOS */
+input,
+textarea,
+button {
+    font-family: inherit;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* DESTAQUE AO NAVEGAR PELO TECLADO */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+    outline: 3px solid #174a7e;
+    outline-offset: 3px;
+}
+
+/* ADAPTAÇÃO PARA CELULARES */
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .formulario-contato {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+        padding: 20px 12px;
+    }
+
+    nav ul a {
+        padding: 10px;
+    }
+}
