@@ -30,6 +30,9 @@ imagens/
  Carlos criou pagina de contato.html
  ana formatou/adaptou codigo html por completo para introdução do ccs
  carlos criou a página bancodedados.sql
+ Arthur criou QRCODE da pagina html.
+ Ana adicionou e editou interacoes.js
+ Ana criou dados.html e editou
  
  
  <!--salvar no terminal: -->
