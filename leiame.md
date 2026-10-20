@@ -29,6 +29,8 @@ imagens/
  Carlos passou pesquisa para codigo html, impactos.html
  Carlos criou pagina de contato.html
  ana formatou/adaptou codigo html por completo para introdução do ccs
+ carlos criou a página bancodedados.sql
+ 
  
  <!--salvar no terminal: -->
  GIT ADD .
