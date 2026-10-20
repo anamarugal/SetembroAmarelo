@@ -66,3 +66,22 @@ if (formContato) {
 }
 
 console.log("JavaScript carregado com sucesso!");
+
+// DADOS.HTML:
+const abrirDados = document.querySelector("#abrir-dados");
+const fecharDados = document.querySelector("#fechar-dados");
+const painelDados = document.querySelector("#painel-dados");
+
+if (abrirDados && fecharDados && painelDados) {
+    abrirDados.addEventListener("click", function () {
+        painelDados.hidden = false;
+        abrirDados.setAttribute("aria-expanded", "true");
+        fecharDados.focus();
+    });
+
+    fecharDados.addEventListener("click", function () {
+        painelDados.hidden = true;
+        abrirDados.setAttribute("aria-expanded", "false");
+        abrirDados.focus();
+    });
+}
