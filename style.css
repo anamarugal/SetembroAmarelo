@@ -886,3 +886,20 @@ a:focus-visible {
     outline: 3px solid #174a7e;
     outline-offset: 3px;
 }
+
+/* FORMULARIOFIC.HTML */
+.campo select {
+    padding: 12px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    max-width: 100%;
+}
+
+.campo small {
+    color: #555555;
+    font-size: 0.9rem;
+}

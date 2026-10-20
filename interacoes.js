@@ -96,3 +96,47 @@ if (localDados) {
             console.error("Não foi possível carregar dados.html.");
         });
 }
+
+
+// FORMULARIOFIC.HTML
+const formRelato = document.querySelector("#form-relato");
+
+if (formRelato) {
+    formRelato.addEventListener("submit", function (evento) {
+        evento.preventDefault();
+
+        const categoria = document.querySelector("#categoria");
+        const descricao = document.querySelector("#descricao");
+        const sugestao = document.querySelector("#sugestao-relato");
+        const resposta = document.querySelector("#resultado-relato");
+
+        const textoDescricao = descricao.value.trim();
+
+        if (!categoria.value) {
+            resposta.textContent = "Selecione uma categoria.";
+            categoria.focus();
+            return;
+        }
+
+        if (textoDescricao.length < 20) {
+            resposta.textContent =
+                "A descrição precisa ter pelo menos 20 caracteres.";
+            descricao.focus();
+            return;
+        }
+
+        // Objeto usado somente durante este teste.
+        const relato = {
+            categoria: categoria.value,
+            descricao: textoDescricao,
+            sugestao: sugestao.value.trim()
+        };
+
+        console.log("Relato fictício para teste:", relato);
+
+        resposta.textContent =
+            "Relato fictício validado! Nenhum dado foi enviado ou armazenado.";
+
+        formRelato.reset();
+    });
+}
