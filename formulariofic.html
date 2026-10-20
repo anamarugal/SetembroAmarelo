@@ -1,53 +1,86 @@
 
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Relato Fictício - Valorização da Vida</title>
-    <link rel="stylesheet" href="style.css">
 
     <style>
-        /* ABA AMARELA FIXA NA LATERAL DIREITA */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: white;
+        }
+
+        header {
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #fff176, #fbc02d);
+            border-radius: 12px;
+        }
+
+        nav {
+            margin: 20px 0;
+            padding: 12px;
+            background: #fffde7;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 5px;
+            padding: 8px;
+            color: #222;
+            text-decoration: none;
+        }
+
+        main {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        /* ABA AMARELA FIXA */
         #abrir-relato {
             position: fixed;
             top: 22%;
             right: 0;
-            z-index: 9999;
+            z-index: 1000;
 
+            padding: 16px 10px;
             background: #fbc02d;
             color: #1a1a1a;
             border: 2px solid #d9a514;
             border-right: none;
-            border-radius: 10px 0 0 10px;
+            border-radius: 12px 0 0 12px;
 
-            padding: 16px 10px;
-            font: bold 15px Arial, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
             writing-mode: vertical-rl;
-
             cursor: pointer;
             box-shadow: 0 3px 12px #0003;
         }
 
-        #abrir-relato:hover {
-            background: #fff176;
-        }
-
-        /* PAINEL QUE ABRE NA LATERAL */
+        /* PAINEL LATERAL */
         #painel-relato {
             position: fixed;
             top: 0;
             right: 0;
-            z-index: 10000;
+            z-index: 2000;
 
             width: min(400px, 90vw);
             height: 100vh;
             overflow-y: auto;
             padding: 24px;
 
-            box-sizing: border-box;
             background: #fffde7;
             border-left: 4px solid #fbc02d;
             box-shadow: -5px 0 20px #0003;
@@ -57,14 +90,20 @@
             display: none !important;
         }
 
-        #painel-relato h2 {
-            margin-top: 20px;
+        #fechar-relato {
+            display: block;
+            margin-left: auto;
+            padding: 10px 14px;
+            background: #fbc02d;
+            border: 0;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
         }
 
         #painel-relato label {
             display: block;
             margin-top: 16px;
-            margin-bottom: 6px;
             font-weight: bold;
         }
 
@@ -72,54 +111,54 @@
         #painel-relato textarea {
             display: block;
             width: 100%;
-            padding: 10px;
-            box-sizing: border-box;
-            font: inherit;
-            border: 1px solid #aaa;
+            margin-top: 6px;
+            padding: 11px;
+            border: 1px solid #999;
             border-radius: 6px;
-        }
-
-        #fechar-relato {
-            display: block;
-            margin-left: auto;
-            padding: 10px 14px;
-            background: #fbc02d;
+            background: white;
             color: #1a1a1a;
-            border: none;
-            border-radius: 6px;
-            font-weight: bold;
-            cursor: pointer;
+            font: inherit;
         }
 
         #enviar-relato {
             width: 100%;
             margin-top: 20px;
             padding: 13px;
-            background: #fbc02d;
-            color: #1a1a1a;
             border: none;
             border-radius: 8px;
-            font: bold 16px Arial, sans-serif;
+            background: #fbc02d;
+            color: #1a1a1a;
+            font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
         }
 
         #resultado-relato {
-            margin-top: 16px;
             overflow-wrap: anywhere;
+            font-weight: bold;
         }
 
-        #abrir-relato:focus-visible,
-        #fechar-relato:focus-visible,
-        #enviar-relato:focus-visible {
+        button:focus-visible,
+        select:focus-visible,
+        textarea:focus-visible,
+        a:focus-visible {
             outline: 3px solid #174a7e;
             outline-offset: 3px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            text-align: center;
+            background: #fffde7;
+            border-top: 3px solid #fbc02d;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- ABA LATERAL -->
+    <!-- ABA AMARELA -->
     <button
         type="button"
         id="abrir-relato"
@@ -128,42 +167,36 @@
         Relato fictício
     </button>
 
-    <!-- PAINEL DO FORMULÁRIO -->
-    <aside id="painel-relato"
-           aria-labelledby="titulo-relato"
-           hidden>
-
+    <!-- FORMULÁRIO LATERAL -->
+    <aside id="painel-relato" hidden>
         <button type="button" id="fechar-relato">
             Fechar ✕
         </button>
 
-        <h2 id="titulo-relato">Relato fictício</h2>
+        <h2>Relato fictício</h2>
 
         <p>
-            Este formulário faz parte do projeto escolar
-            sobre prevenção ao suicídio e valorização da vida.
+            Formulário para testar o projeto escolar sobre
+            prevenção ao suicídio e valorização da vida.
         </p>
 
         <p>
             <strong>Importante:</strong> use somente situações
-            inventadas. Nenhuma informação será enviada ou armazenada.
+            inventadas. Os dados não serão enviados nem armazenados.
         </p>
 
         <form id="form-relato" novalidate>
-
             <label for="categoria">Categoria:</label>
 
-            <select id="categoria" name="categoria" required>
-                <option value="">Selecione uma categoria</option>
+            <select id="categoria" name="categoria">
+                <option value="">Selecione uma opção</option>
                 <option value="convivencia">Convivência</option>
                 <option value="ambiente-digital">Ambiente digital</option>
-                <option value="valorizacao-da-vida">
-                    Valorização da vida
-                </option>
+                <option value="valorizacao">Valorização da vida</option>
             </select>
 
             <label for="descricao">
-                Descreva uma situação fictícia:
+                Descreva a situação fictícia:
             </label>
 
             <textarea
@@ -171,19 +204,20 @@
                 name="descricao"
                 rows="5"
                 maxlength="1000"
-                placeholder="Escreva uma situação inventada..."
-                required></textarea>
+                placeholder="Invente uma situação para testar..."
+            ></textarea>
 
-            <label for="sugestao-relato">
+            <label for="sugestao">
                 Sugestão de encaminhamento (opcional):
             </label>
 
             <textarea
-                id="sugestao-relato"
+                id="sugestao"
                 name="sugestao"
                 rows="3"
                 maxlength="500"
-                placeholder="Como essa situação poderia ser encaminhada?"></textarea>
+                placeholder="Como a situação poderia ser encaminhada?"
+            ></textarea>
 
             <button type="submit" id="enviar-relato">
                 Conferir relato
@@ -192,75 +226,75 @@
             <p id="resultado-relato"
                role="status"
                aria-live="polite"></p>
-
         </form>
     </aside>
 
-    <!-- CONTEÚDO NORMAL DA PÁGINA -->
+    <!-- CONTEÚDO DA PÁGINA -->
     <header>
-        <h1>RELATO FICTÍCIO</h1>
+        <h1>WEB pela Convivência</h1>
+        <p>Prevenção ao suicídio e valorização da vida</p>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Principal</a></li>
-            <li><a href="problema.html">Problemas</a></li>
-            <li><a href="combate.html">Combate</a></li>
-            <li><a href="impactos.html">Impactos</a></li>
-            <li><a href="contato.html">Contato</a></li>
-            <li><a href="fontes.html">Fontes</a></li>
-        </ul>
+    <nav aria-label="Menu principal">
+        <a href="index.html">Principal</a>
+        <a href="problema.html">Problemas</a>
+        <a href="combate.html">Combate</a>
+        <a href="impactos.html">Impactos</a>
+        <a href="contato.html">Contato</a>
+        <a href="fontes.html">Fontes</a>
     </nav>
 
     <main>
-        <h2>Prevenção ao suicídio e valorização da vida</h2>
+        <h2>Um espaço de conscientização</h2>
 
         <p>
-            Este espaço é um protótipo para testar um formulário
-            de relatos fictícios desenvolvido para o projeto escolar.
+            Este projeto apresenta informações sobre prevenção
+            ao suicídio, convivência e valorização da vida.
         </p>
 
         <p>
-            Clique na aba amarela à direita para abrir o formulário.
+            Clique na aba amarela à direita para abrir o
+            formulário de relato fictício.
         </p>
     </main>
 
     <footer>
-        <p>
-            Projeto escolar sobre prevenção ao suicídio
-            e valorização da vida.
-        </p>
+        <p>Projeto escolar sobre prevenção ao suicídio e valorização da vida.</p>
     </footer>
 
     <script>
-        const abrirRelato = document.getElementById("abrir-relato");
-        const fecharRelato = document.getElementById("fechar-relato");
-        const painelRelato = document.getElementById("painel-relato");
-        const formRelato = document.getElementById("form-relato");
+        // Seleciona os elementos do painel.
+        const botaoAbrir = document.getElementById("abrir-relato");
+        const botaoFechar = document.getElementById("fechar-relato");
+        const painel = document.getElementById("painel-relato");
+        const formulario = document.getElementById("form-relato");
 
-        abrirRelato.addEventListener("click", function () {
-            painelRelato.hidden = false;
-            abrirRelato.setAttribute("aria-expanded", "true");
-            fecharRelato.focus();
+        // Abre o painel lateral.
+        botaoAbrir.addEventListener("click", function () {
+            painel.hidden = false;
+            botaoAbrir.setAttribute("aria-expanded", "true");
+            botaoFechar.focus();
         });
 
-        fecharRelato.addEventListener("click", function () {
-            painelRelato.hidden = true;
-            abrirRelato.setAttribute("aria-expanded", "false");
-            abrirRelato.focus();
+        // Fecha o painel lateral.
+        botaoFechar.addEventListener("click", function () {
+            painel.hidden = true;
+            botaoAbrir.setAttribute("aria-expanded", "false");
+            botaoAbrir.focus();
         });
 
-        formRelato.addEventListener("submit", function (evento) {
+        // Confere os campos sem enviar informações.
+        formulario.addEventListener("submit", function (evento) {
             evento.preventDefault();
 
             const categoria = document.getElementById("categoria");
             const descricao = document.getElementById("descricao");
-            const sugestao = document.getElementById("sugestao-relato");
+            const sugestao = document.getElementById("sugestao");
             const resultado = document.getElementById("resultado-relato");
 
             resultado.textContent = "";
 
-            if (!categoria.value) {
+            if (categoria.value === "") {
                 resultado.textContent = "Selecione uma categoria.";
                 categoria.focus();
                 return;
@@ -268,15 +302,15 @@
 
             if (descricao.value.trim().length < 20) {
                 resultado.textContent =
-                    "Escreva uma situação fictícia com pelo menos 20 caracteres.";
+                    "Escreva pelo menos 20 caracteres na descrição.";
                 descricao.focus();
                 return;
             }
 
             resultado.textContent =
-                "Relato fictício validado! Nenhum dado foi enviado ou armazenado.";
+                "Relato fictício validado! Nada foi enviado ou armazenado.";
 
-            formRelato.reset();
+            formulario.reset();
         });
     </script>
 
