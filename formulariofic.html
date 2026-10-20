@@ -48,4 +48,38 @@
         <p id="resultado-relato" role="status"
            aria-live="polite"></p>
     </form>
+
+<button type="button" id="abrir-relato">
+    Relato fictício
+</button>
+
+<aside id="painel-relato" hidden>
+    <button type="button" id="fechar-relato">
+        Fechar ✕
+    </button>
+
+    <h2>Registrar relato fictício</h2>
+    <p>Use somente situações inventadas. Nada será enviado ou armazenado.</p>
+
+    <form id="form-relato" novalidate>
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" required>
+            <option value="">Selecione</option>
+            <option value="convivencia">Convivência</option>
+            <option value="ambiente-digital">Ambiente digital</option>
+            <option value="valorizacao-da-vida">Valorização da vida</option>
+        </select>
+
+        <label for="descricao">Situação fictícia:</label>
+        <textarea id="descricao" rows="5" maxlength="1000" required></textarea>
+
+        <label for="sugestao-relato">Sugestão (opcional):</label>
+        <textarea id="sugestao-relato" rows="3" maxlength="500"></textarea>
+
+        <button type="submit">Conferir relato</button>
+        <p id="resultado-relato" role="status" aria-live="polite"></p>
+    </form>
+</aside>
+
+
 </aside>

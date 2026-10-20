@@ -106,13 +106,10 @@ const painelRelato = document.querySelector("#painel-relato");
 if (abrirRelato && fecharRelato && painelRelato) {
     abrirRelato.addEventListener("click", function () {
         painelRelato.hidden = false;
-        abrirRelato.setAttribute("aria-expanded", "true");
-        fecharRelato.focus();
     });
 
     fecharRelato.addEventListener("click", function () {
         painelRelato.hidden = true;
-        abrirRelato.setAttribute("aria-expanded", "false");
         abrirRelato.focus();
     });
 }
