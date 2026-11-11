@@ -331,6 +331,49 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+        // 6. CARTÕES INTERATIVOS DA PÁGINA COMBATE
+
+    const cartoesPrevencao = document.querySelectorAll(
+        ".card-prevencao"
+    );
+
+    const cartoesApoio = document.querySelectorAll(
+        ".card-apoio"
+    );
+
+    function configurarCartoes(cartoes) {
+
+        cartoes.forEach((cartao) => {
+
+            cartao.addEventListener("click", () => {
+
+                const estavaAberto =
+                    cartao.getAttribute("aria-expanded") === "true";
+
+                // Fechar os outros cartões do mesmo grupo
+                cartoes.forEach((outroCartao) => {
+
+                    outroCartao.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                });
+
+                // Abrir o cartão selecionado, se estava fechado
+                cartao.setAttribute(
+                    "aria-expanded",
+                    String(!estavaAberto)
+                );
+
+            });
+
+        });
+
+    }
+
+    configurarCartoes(cartoesPrevencao);
+    configurarCartoes(cartoesApoio);
 
     console.log("Interações do site carregadas com sucesso!");
 
