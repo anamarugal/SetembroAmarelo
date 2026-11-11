@@ -1,106 +1,98 @@
 
 /* =========================================
-   COMBATE.HTML - NOVA ESTILIZAÇÃO
+   COMBATE.HTML - ESTILIZAÇÃO REVISADA
 ========================================= */
 
 /* APRESENTAÇÃO */
 .combate-introducao {
+    max-width: 850px;
+    margin: 35px auto 55px;
+    padding: 30px;
     text-align: center;
-    padding: 30px 22px;
-    margin: 25px 0 40px;
-    background: linear-gradient(135deg, #fffde7, #fff8c6);
-    border: 1px solid #fff0a6;
-    border-radius: 18px;
-    box-shadow: 0 5px 18px rgba(251, 192, 45, 0.10);
+    background: #fffdf5;
+    border-radius: 14px;
+    border: 1px solid #f2e7bd;
 }
 
 .combate-introducao h2 {
     margin-top: 0;
-    font-size: 1.8rem;
-}
-
-.combate-introducao h2::after {
-    left: 50%;
-    transform: translateX(-50%);
+    color: #333;
 }
 
 .combate-introducao p {
-    max-width: 650px;
+    max-width: 700px;
     margin: 12px auto;
+    line-height: 1.7;
     color: #555;
 }
 
 /* SEÇÕES */
 .secao-prevencao,
 .secao-apoio {
-    margin: 45px 0;
+    margin: 55px 0;
 }
 
 .secao-prevencao > h2,
 .secao-apoio > h2 {
     text-align: center;
-    font-size: 1.8rem;
-}
-
-.secao-prevencao > h2::after,
-.secao-apoio > h2::after {
-    left: 50%;
-    transform: translateX(-50%);
+    margin-bottom: 12px;
 }
 
 .subtitulo-combate {
+    max-width: 650px;
+    margin: 0 auto 30px;
     text-align: center;
     color: #666;
-    max-width: 650px;
-    margin: 0 auto 28px;
+    line-height: 1.6;
 }
 
-/* GRADES DOS CARTÕES */
+/* GRADES */
 .grade-prevencao,
 .grade-apoio {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px;
-    margin-top: 25px;
+    gap: 20px;
+    align-items: start;
 }
 
-/* CARTÕES DE PREVENÇÃO E APOIO */
+/* CARTÕES */
 .card-prevencao,
 .card-apoio {
+    appearance: none;
+    -webkit-appearance: none;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    text-align: center;
 
     width: 100%;
-    min-height: 205px;
-    padding: 24px 18px;
+    min-width: 0;
+    min-height: 210px;
+    padding: 25px 20px;
 
-    background: #ffffff;
-    border: 1px solid #f0e5b5;
-    border-radius: 16px;
-
-    color: #252525;
+    background: #fff;
+    color: #333;
     font-family: inherit;
+    font-size: 1rem;
+    text-align: center;
+
+    border: 1px solid #e9dfbd;
+    border-radius: 14px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+
     cursor: pointer;
 
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.045);
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        border-color 0.25s ease,
-        background 0.25s ease;
+    transition: border-color .2s ease,
+                box-shadow .2s ease,
+                background .2s ease;
 }
 
-/* EFEITO AO PASSAR O MOUSE */
 .card-prevencao:hover,
 .card-apoio:hover {
-    transform: translateY(-6px);
-    border-color: #fbc02d;
-    box-shadow: 0 9px 22px rgba(251, 192, 45, 0.17);
-    background: #fffef7;
+    border-color: #e5b92e;
+    background: #fffdf5;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.08);
 }
 
 /* ÍCONES */
@@ -110,55 +102,56 @@
     align-items: center;
     justify-content: center;
 
-    width: 65px;
-    height: 65px;
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
 
     margin-bottom: 15px;
 
-    background: #fff8d6;
+    background: #fff6d5;
     border-radius: 50%;
-
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
-/* TÍTULOS DOS CARTÕES */
+/* TÍTULOS */
 .card-prevencao h3,
 .card-apoio h3 {
-    margin-bottom: 8px;
-    color: #292929;
-    font-size: 1.08rem;
+    margin: 0 0 10px;
+    color: #333;
+    font-size: 1.05rem;
+    line-height: 1.4;
 }
 
-/* TEXTO CURTO DOS CARTÕES */
+/* TEXTO RESUMIDO */
 .texto-card {
     display: block;
-    color: #777;
-    font-size: 0.9rem;
+    color: #666;
+    font-size: .9rem;
     line-height: 1.5;
 }
 
-/* CONTEÚDO REVELADO AO CLICAR */
+/* CONTEÚDO EXPANDIDO */
 .conteudo-card {
     display: none;
+    width: 100%;
+    box-sizing: border-box;
 
-    margin-top: 16px;
-    padding-top: 14px;
+    margin-top: 18px;
+    padding-top: 15px;
 
-    border-top: 1px solid #f0e3ac;
+    border-top: 1px solid #e9dfbd;
 
     color: #444;
-    font-size: 0.94rem;
-    line-height: 1.6;
-
-    animation: aparecer-conteudo 0.3s ease;
+    font-size: .94rem;
+    line-height: 1.7;
+    text-align: left;
 }
 
 /* CARTÃO ABERTO */
 .card-prevencao[aria-expanded="true"],
 .card-apoio[aria-expanded="true"] {
-    background: #fffde7;
-    border-color: #fbc02d;
-    box-shadow: 0 7px 20px rgba(251, 192, 45, 0.15);
+    background: #fffdf2;
+    border-color: #e5b92e;
 }
 
 .card-prevencao[aria-expanded="true"] .conteudo-card,
@@ -166,32 +159,26 @@
     display: block;
 }
 
-/* ANIMAÇÃO */
-@keyframes aparecer-conteudo {
-    from {
-        opacity: 0;
-        transform: translateY(-8px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* ACESSIBILIDADE */
+.card-prevencao:focus-visible,
+.card-apoio:focus-visible {
+    outline: 3px solid #174a7e;
+    outline-offset: 4px;
 }
 
-/* MENSAGEM FINAL DE APOIO */
+/* MENSAGEM FINAL */
 .mensagem-apoio {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
 
-    margin-top: 35px;
-    padding: 22px;
+    margin: 45px 0;
+    padding: 25px;
 
-    background: linear-gradient(135deg, #fffde7, #fff5c0);
-    border: 1px solid #f5e5a1;
-    border-radius: 15px;
+    background: #fffdf5;
+    border: 1px solid #f0e4b9;
+    border-radius: 14px;
 }
 
 .mensagem-apoio span {
@@ -200,24 +187,17 @@
 
 .mensagem-apoio p {
     margin: 0;
-    font-weight: 600;
     color: #444;
+    line-height: 1.6;
 }
 
-/* ÁREA DOS DADOS */
+/* DADOS */
 .secao-dados {
-    margin-top: 45px;
+    margin: 45px 0;
     text-align: center;
 }
 
-/* ACESSIBILIDADE DOS CARTÕES */
-.card-prevencao:focus-visible,
-.card-apoio:focus-visible {
-    outline: 3px solid #174a7e;
-    outline-offset: 4px;
-}
-
-/* RESPONSIVIDADE - TABLETS */
+/* TABLETS */
 @media (max-width: 750px) {
     .grade-prevencao,
     .grade-apoio {
@@ -225,31 +205,22 @@
     }
 }
 
-/* RESPONSIVIDADE - CELULARES */
+/* CELULARES */
 @media (max-width: 480px) {
     .combate-introducao {
-        padding: 22px 15px;
-    }
-
-    .combate-introducao h2 {
-        font-size: 1.4rem;
-    }
-
-    .secao-prevencao > h2,
-    .secao-apoio > h2 {
-        font-size: 1.45rem;
+        padding: 22px 16px;
     }
 
     .grade-prevencao,
     .grade-apoio {
         grid-template-columns: 1fr;
-        gap: 14px;
+        gap: 15px;
     }
 
     .card-prevencao,
     .card-apoio {
-        min-height: 180px;
-        padding: 22px 16px;
+        min-height: 175px;
+        padding: 22px 17px;
     }
 
     .mensagem-apoio {
@@ -258,12 +229,9 @@
     }
 }
 
-/* RESPEITAR PREFERÊNCIA POR MENOS ANIMAÇÕES */
 @media (prefers-reduced-motion: reduce) {
     .card-prevencao,
-    .card-apoio,
-    .conteudo-card {
-        animation: none;
+    .card-apoio {
         transition: none;
     }
 }
