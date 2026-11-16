@@ -1092,7 +1092,6 @@ a:focus-visible {
 .imagem-projeto {
     width: 450px;
     height: 300px;
-    max-width: 100%;
     object-fit: contain;
     display: block;
     margin: 20px auto;
