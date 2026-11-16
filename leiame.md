@@ -44,4 +44,3 @@ imagens/
  1. COlocar imagens
  2. Falar com o samuel para adicionar o e-mail nos contatos
 
- oi
