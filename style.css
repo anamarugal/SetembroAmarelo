@@ -462,17 +462,16 @@ footer p {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 25px;
-    margin: 30px auto;
+    gap: 15px;
+    margin: 20px auto;
 }
 
 .imagens-combate img {
-    width: 100%;
-    max-width: 150px;
-    height: 200px;
+    width: 220px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 
