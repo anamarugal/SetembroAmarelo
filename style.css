@@ -1089,7 +1089,7 @@ a:focus-visible {
 
 
 /* Organização das imagens */
-imagens {
+.imagens-combate {
     width: 450px !important;
     height: 300px !important;
     object-fit: cover;
