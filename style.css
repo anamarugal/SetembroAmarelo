@@ -1097,7 +1097,12 @@ img {
 }
 
 
-
+imagens {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
 
 
