@@ -1091,7 +1091,7 @@ a:focus-visible {
 /* Organização das imagens */
 .imagem-projeto {
     width: 450px;
-    height: 300px;
+    height: 700px;
     object-fit: cover;
     display: block;
     margin: 20px 0;
