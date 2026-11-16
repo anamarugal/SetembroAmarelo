@@ -1089,7 +1089,7 @@ a:focus-visible {
 
 
 /* Organização das imagens */
-img {
+.imagem-projeto {
     width: 450px;
     height: 300px;
     object-fit: cover;
