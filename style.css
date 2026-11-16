@@ -1090,8 +1090,8 @@ a:focus-visible {
 
 /* Organização das imagens */
 img {
-    width: 450px !important;
-    height: 300px !important;
+    width: 450px;
+    height: 300px;
     object-fit: cover;
     display: block;
     margin: 20px 0;
