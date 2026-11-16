@@ -455,6 +455,28 @@ footer p {
 }
 
 
+
+/* IMAGENS DA PÁGINA COMBATE */
+.imagens-combate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 30px auto;
+}
+
+.imagens-combate img {
+    width: 100%;
+    max-width: 450px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
 /* IMPACTOS.HTML  */
 /* Reset e configurações gerais */
 * {
