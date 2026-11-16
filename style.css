@@ -462,8 +462,8 @@ footer p {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
-    margin: 20px auto;
+    gap: 25px;
+    margin: 30px auto;
 }
 
 .imagens-combate img {
