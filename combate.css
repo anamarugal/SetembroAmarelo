@@ -349,3 +349,15 @@ main p {
         transition: none;
     }
 }
+
+/* CORREÇÃO DO BOTÃO DADOS E ESTATÍSTICAS */
+#abrir-dados {
+    transform: none !important;
+    rotate: none !important;
+    writing-mode: horizontal-tb !important;
+    animation: none !important;
+    position: static;
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
