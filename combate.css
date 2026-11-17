@@ -21,13 +21,11 @@ main {
     margin: 35px 0;
 }
 
-/* TÍTULOS DAS SEÇÕES */
 main h2 {
     text-align: center;
     margin: 30px 0 18px;
-    color: #315b50;
+    color: #B8860B;
 }
-
 /* TEXTOS */
 main p {
     line-height: 1.8;
@@ -71,7 +69,7 @@ main p {
     border: 2px solid transparent;
     border-radius: 14px;
     background: linear-gradient(135deg, #f3faf6, #e5f1e9);
-    color: #315b50;
+    color: #B8860B;
     cursor: pointer;
 
     display: flex;
@@ -92,7 +90,7 @@ main p {
 .card-prevencao:hover,
 .card-apoio:hover {
     transform: translateY(-6px);
-    border-color: #91bba3;
+    color: #B8860B;
     background: linear-gradient(135deg, #e5f4eb, #d5eadc);
     box-shadow: 0 10px 22px rgba(49, 91, 80, 0.16);
 }
@@ -104,7 +102,7 @@ main p {
 
 .card-prevencao:focus-visible,
 .card-apoio:focus-visible {
-    outline: 3px solid #315b50;
+    outline: 3px solid #B8860B;
     outline-offset: -3px;
 }
 
@@ -130,7 +128,7 @@ main p {
 
 .card-prevencao:hover .titulo-card,
 .card-apoio:hover .titulo-card {
-    color: #1d4939;
+    color: #B8860B;
 }
 
 /* INDICADOR */
@@ -151,13 +149,13 @@ main p {
 .card-prevencao[aria-expanded="true"],
 .card-apoio[aria-expanded="true"] {
     background: linear-gradient(135deg, #dcefe3, #cce5d5);
-    border-color: #5c9675;
+    border-color: #B8860B;
     box-shadow: 0 7px 18px rgba(49, 91, 80, 0.18);
 }
 
 .card-prevencao[aria-expanded="true"] .indicador-card,
 .card-apoio[aria-expanded="true"] .indicador-card {
-    background: #a8d0b5;
+    background: #B8860B;
 }
 
 /* CONTEÚDO INTERNO */
@@ -188,14 +186,14 @@ main p {
     margin: 30px 0;
     padding: 22px;
     background: #f0f7f3;
-    border-left: 5px solid #6b9b83;
+    border-left: 5px solid #B8860B;
     border-radius: 10px;
 }
 
 .mensagem-apoio p {
     margin: 0;
     text-align: center;
-    color: #315b50;
+    color: #B8860B;
 }
 
 /* ==========================================
