@@ -382,3 +382,33 @@ main p {
 
     cursor: pointer;
 }
+
+/* CORREÇÃO DEFINITIVA DO BOTÃO DADOS E ESTATÍSTICAS */
+.secao-dados {
+    text-align: center;
+}
+
+.secao-dados #abrir-dados {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    display: inline-block !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: calc(100% - 30px);
+
+    margin: 20px auto !important;
+    padding: 14px 22px !important;
+
+    writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+    transform: none !important;
+    rotate: none !important;
+    animation: none !important;
+
+    border-radius: 12px;
+    box-sizing: border-box;
+}
