@@ -426,3 +426,11 @@ transform: rotate(180deg) !important;
     text-orientation: mixed !important;
     transform: translateY(-50%) rotate(180deg) !important;
 }
+
+/* FAZER O BOTÃO APARECER NO COMBATE */
+#abrir-dados {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 99999 !important;
+}
