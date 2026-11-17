@@ -1,0 +1,23 @@
+
+/* =====================================
+   IMAGEM - PÁGINA DE IMPACTOS
+===================================== */
+
+.imagem-projeto {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
+    margin: 35px auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* ADAPTAÇÃO PARA CELULARES */
+@media (max-width: 600px) {
+    .imagem-projeto {
+        max-width: 100%;
+        margin: 25px auto;
+    }
+}
