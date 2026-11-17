@@ -1090,6 +1090,36 @@ a:focus-visible {
     }
 }
 
+/* ==========================================
+   BOTÃO DADOS E ESTATÍSTICAS
+   PADRÃO PARA TODAS AS PÁGINAS
+========================================== */
+
+#abrir-dados {
+    position: fixed !important;
+    top: 50% !important;
+    right: 0 !important;
+    left: auto !important;
+
+    z-index: 99999 !important;
+
+    display: block !important;
+
+    padding: 12px 7px !important;
+
+    writing-mode: vertical-rl !important;
+    text-orientation: mixed !important;
+
+    transform: translateY(-50%) rotate(180deg) !important;
+
+    font-size: 13px !important;
+
+    border-radius: 10px 0 0 10px !important;
+
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
 
 
 

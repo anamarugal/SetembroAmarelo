@@ -230,55 +230,7 @@ main p {
     text-align: center;
 }
 
-/* ==========================================
-   BOTÃO DADOS E ESTATÍSTICAS
-========================================== */
 
-#abrir-dados {
-    position: fixed !important;
-    right: 0 !important;
-    top: 50% !important;
-    left: auto !important;
-    bottom: auto !important;
-
-    z-index: 99999 !important;
-
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-
-    width: auto;
-    height: auto;
-
-    padding: 14px 10px;
-
-    background: #1a1a1a;
-    color: #ffffff;
-
-    border: 1px solid #ffffff;
-    border-radius: 10px 0 0 10px;
-
-    font-size: 15px;
-    font-weight: bold;
-    font-family: inherit;
-
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-
-    transform: translateY(-50%) rotate(180deg);
-
-    cursor: pointer;
-    box-sizing: border-box;
-}
-
-#abrir-dados:hover {
-    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.25);
-}
-
-#abrir-dados:focus-visible {
-    outline: 3px solid #8bbda0;
-    outline-offset: 4px;
-}
 
 /* ==========================================
    RESPONSIVIDADE PARA CELULARES
