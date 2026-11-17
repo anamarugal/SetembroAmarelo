@@ -1120,8 +1120,7 @@ a:focus-visible {
     box-sizing: border-box;
 }
 
-
-
-
-
-
+/* Esconder o botão enquanto o painel de dados estiver aberto */
+body.dados-abertos #abrir-dados {
+    display: none !important;
+}

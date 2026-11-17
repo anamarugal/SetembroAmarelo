@@ -161,135 +161,70 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // 3. CARREGAR O PAINEL DE DADOS
-    const localDados = document.querySelector("#local-dados");
+       // 3. CARREGAR E CONTROLAR O PAINEL DE DADOS
 
-    if (localDados) {
+    const localDados = document.querySelector("#local-dados");
+    const abrir = document.querySelector("#abrir-dados");
+
+    if (localDados && abrir) {
 
         fetch("dados.html")
-
             .then((resposta) => {
-
                 if (!resposta.ok) {
-                    throw new Error(
-                        `Falha ao carregar dados.html (${resposta.status})`
-                    );
+                    throw new Error("Falha ao carregar dados.html");
                 }
 
                 return resposta.text();
             })
-
             .then((html) => {
 
                 localDados.innerHTML = html;
 
                 const painel = document.querySelector("#painel-dados");
-                const abrir = document.querySelector("#abrir-dados");
                 const fechar = document.querySelector("#fechar-dados");
 
-
-                if (!painel || !abrir || !fechar) {
-
-                    console.warn(
-                        "O painel de dados foi carregado, mas faltam elementos de controle."
-                    );
-
+                if (!painel || !fechar) {
+                    console.error("Elementos do painel de dados não encontrados.");
                     return;
                 }
 
+                // Estado inicial
+                painel.hidden = true;
+                abrir.setAttribute("aria-expanded", "false");
 
-                abrir.setAttribute(
-                    "aria-expanded",
-                    String(!painel.hidden)
-                );
-
-
-                // Abrir painel
+                // Abrir dados
                 abrir.addEventListener("click", () => {
 
                     painel.hidden = false;
 
-                    abrir.setAttribute(
-                        "aria-expanded",
-                        "true"
-                    );
+                    document.body.classList.add("dados-abertos");
+
+                    abrir.setAttribute("aria-expanded", "true");
 
                     fechar.focus();
                 });
 
-
-                // Fechar painel
+                // Fechar dados
                 fechar.addEventListener("click", () => {
 
                     painel.hidden = true;
 
-                    abrir.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
+                    document.body.classList.remove("dados-abertos");
+
+                    abrir.setAttribute("aria-expanded", "false");
 
                     abrir.focus();
                 });
 
             })
-
             .catch((erro) => {
 
-                console.error(
-                    "Não foi possível carregar dados.html.",
-                    erro
-                );
+                console.error("Erro ao carregar os dados:", erro);
 
                 localDados.textContent =
-                    "Não foi possível carregar os dados agora. Tente novamente mais tarde.";
+                    "Não foi possível carregar os dados agora.";
             });
     }
-
-
-    // 4. PAINEL DE RELATOS
-    const abrirRelato = document.querySelector("#abrir-relato");
-
-    const fecharRelato = document.querySelector("#fechar-relato");
-
-    const painelRelato = document.querySelector("#painel-relato");
-
-
-    if (abrirRelato && fecharRelato && painelRelato) {
-
-        abrirRelato.setAttribute(
-            "aria-expanded",
-            String(!painelRelato.hidden)
-        );
-
-
-        // Abrir painel de relatos
-        abrirRelato.addEventListener("click", () => {
-
-            painelRelato.hidden = false;
-
-            abrirRelato.setAttribute(
-                "aria-expanded",
-                "true"
-            );
-
-            fecharRelato.focus();
-        });
-
-
-        // Fechar painel de relatos
-        fecharRelato.addEventListener("click", () => {
-
-            painelRelato.hidden = true;
-
-            abrirRelato.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            abrirRelato.focus();
-        });
-    }
-
 
     // 5. FECHAR PAINÉIS COM A TECLA ESC
     document.addEventListener("keydown", (evento) => {
@@ -298,20 +233,17 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-
         // Fechar painel de dados
         const painelDados = document.querySelector("#painel-dados");
-
         const botaoDados = document.querySelector("#abrir-dados");
 
         if (painelDados && !painelDados.hidden) {
 
             painelDados.hidden = true;
 
-            botaoDados?.setAttribute(
-                "aria-expanded",
-                "false"
-            );
+            document.body.classList.remove("dados-abertos");
+
+            botaoDados?.setAttribute("aria-expanded", "false");
 
             botaoDados?.focus();
         }
