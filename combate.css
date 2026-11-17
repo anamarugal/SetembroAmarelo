@@ -115,10 +115,9 @@ main p {
     line-height: 1;
 }
 
-/* INDICADOR QUANDO ABERTO */
-.card-prevencao[aria-expanded="true"] .indicador-card,
-.card-apoio[aria-expanded="true"] .indicador-card {
-    transform: rotate(45deg);
+.card-prevencao:hover .icone-prevencao,
+.card-apoio:hover .icone-prevencao {
+    transform: scale(1.2);
 }
 
 /* CONTEÚDO INTERNO DOS CARTÕES */
