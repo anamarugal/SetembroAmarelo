@@ -1,4 +1,4 @@
-
+```css
 /* ==========================================
    COMBATE E PREVENÇÃO
    Estilização exclusiva da página
@@ -39,7 +39,6 @@ main p {
    CARTÕES DE PREVENÇÃO E APOIO
 ========================================== */
 
-/* GRADE DOS CARTÕES */
 .grade-prevencao,
 .grade-apoio {
     display: grid;
@@ -48,7 +47,6 @@ main p {
     margin: 25px auto;
 }
 
-/* ITEM INDIVIDUAL */
 .item-card {
     background: #ffffff;
     border: 1px solid #dce9e3;
@@ -66,12 +64,14 @@ main p {
 /* BOTÕES DOS CARTÕES */
 .card-prevencao,
 .card-apoio {
+    position: relative;
     width: 100%;
-    min-height: 125px;
+    min-height: 145px;
     padding: 20px;
-    border: none;
-    background: #f0f7f3;
-    color: #294c41;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #f3faf6, #e5f1e9);
+    color: #315b50;
     cursor: pointer;
 
     display: flex;
@@ -80,16 +80,28 @@ main p {
     justify-content: center;
     gap: 9px;
 
-    font-family: inherit;
-    transition: background 0.2s ease;
+    box-shadow: 0 4px 10px rgba(49, 91, 80, 0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
 }
 
 .card-prevencao:hover,
 .card-apoio:hover {
-    background: #e1efe7;
+    transform: translateY(-6px);
+    border-color: #91bba3;
+    background: linear-gradient(135deg, #e5f4eb, #d5eadc);
+    box-shadow: 0 10px 22px rgba(49, 91, 80, 0.16);
 }
 
-/* FOCO PARA ACESSIBILIDADE */
+.card-prevencao:active,
+.card-apoio:active {
+    transform: scale(0.97);
+}
+
 .card-prevencao:focus-visible,
 .card-apoio:focus-visible {
     outline: 3px solid #315b50;
@@ -98,7 +110,14 @@ main p {
 
 /* ÍCONES */
 .icone-prevencao {
+    display: inline-block;
     font-size: 30px;
+    transition: transform 0.3s ease;
+}
+
+.card-prevencao:hover .icone-prevencao,
+.card-apoio:hover .icone-prevencao {
+    transform: scale(1.2) rotate(-5deg);
 }
 
 /* TÍTULOS DOS CARTÕES */
@@ -106,21 +125,42 @@ main p {
     font-size: 17px;
     font-weight: 700;
     text-align: center;
+    transition: color 0.25s ease;
 }
 
-/* INDICADOR DE ABRIR E FECHAR */
+.card-prevencao:hover .titulo-card,
+.card-apoio:hover .titulo-card {
+    color: #1d4939;
+}
+
+/* INDICADOR */
 .indicador-card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: #d2e8d9;
     font-size: 23px;
     font-weight: bold;
     line-height: 1;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.card-prevencao:hover .icone-prevencao,
-.card-apoio:hover .icone-prevencao {
-    transform: scale(1.2);
+.card-prevencao[aria-expanded="true"],
+.card-apoio[aria-expanded="true"] {
+    background: linear-gradient(135deg, #dcefe3, #cce5d5);
+    border-color: #5c9675;
+    box-shadow: 0 7px 18px rgba(49, 91, 80, 0.18);
 }
 
-/* CONTEÚDO INTERNO DOS CARTÕES */
+.card-prevencao[aria-expanded="true"] .indicador-card,
+.card-apoio[aria-expanded="true"] .indicador-card {
+    background: #a8d0b5;
+}
+
+/* CONTEÚDO INTERNO */
 .conteudo-card {
     display: none;
     padding: 20px;
@@ -128,7 +168,6 @@ main p {
     border-top: 1px solid #dce9e3;
 }
 
-/* MOSTRA O CONTEÚDO QUANDO O CARTÃO ESTÁ ABERTO */
 .card-prevencao[aria-expanded="true"] + .conteudo-card,
 .card-apoio[aria-expanded="true"] + .conteudo-card {
     display: block;
@@ -192,6 +231,56 @@ main p {
 }
 
 /* ==========================================
+   BOTÃO DADOS E ESTATÍSTICAS
+========================================== */
+
+#abrir-dados {
+    position: fixed !important;
+    right: 0 !important;
+    top: 50% !important;
+    left: auto !important;
+    bottom: auto !important;
+
+    z-index: 99999 !important;
+
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    width: auto;
+    height: auto;
+
+    padding: 14px 10px;
+
+    background: #1a1a1a;
+    color: #ffffff;
+
+    border: 1px solid #ffffff;
+    border-radius: 10px 0 0 10px;
+
+    font-size: 15px;
+    font-weight: bold;
+    font-family: inherit;
+
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+
+    transform: translateY(-50%) rotate(180deg);
+
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+#abrir-dados:hover {
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.25);
+}
+
+#abrir-dados:focus-visible {
+    outline: 3px solid #8bbda0;
+    outline-offset: 4px;
+}
+
+/* ==========================================
    RESPONSIVIDADE PARA CELULARES
 ========================================== */
 
@@ -225,122 +314,9 @@ main p {
     }
 }
 
-
-/* ==========================================
-   BOTÕES INTERATIVOS - COMBATE
-========================================== */
-
-/* CARTÕES */
-.card-prevencao,
-.card-apoio {
-    position: relative;
-    min-height: 145px;
-    border: 2px solid transparent;
-    border-radius: 14px;
-    background: linear-gradient(135deg, #f3faf6, #e5f1e9);
-    color: #315b50;
-    box-shadow: 0 4px 10px rgba(49, 91, 80, 0.08);
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background 0.25s ease,
-        border-color 0.25s ease;
-}
-
-/* EFEITO AO PASSAR O MOUSE */
-.card-prevencao:hover,
-.card-apoio:hover {
-    transform: translateY(-6px);
-    border-color: #91bba3;
-    background: linear-gradient(135deg, #e5f4eb, #d5eadc);
-    box-shadow: 0 10px 22px rgba(49, 91, 80, 0.16);
-}
-
-/* EFEITO AO CLICAR */
-.card-prevencao:active,
-.card-apoio:active {
-    transform: scale(0.97);
-}
-
-/* CARTÃO ABERTO */
-.card-prevencao[aria-expanded="true"],
-.card-apoio[aria-expanded="true"] {
-    background: linear-gradient(135deg, #dcefe3, #cce5d5);
-    border-color: #5c9675;
-    box-shadow: 0 7px 18px rgba(49, 91, 80, 0.18);
-}
-
-/* ANIMAÇÃO DOS ÍCONES */
-.icone-prevencao {
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.card-prevencao:hover .icone-prevencao,
-.card-apoio:hover .icone-prevencao {
-    transform: scale(1.2) rotate(-5deg);
-}
-
-/* TÍTULOS */
-.titulo-card {
-    transition: color 0.25s ease;
-}
-
-.card-prevencao:hover .titulo-card,
-.card-apoio:hover .titulo-card {
-    color: #1d4939;
-}
-
-/* INDICADOR DE EXPANSÃO */
-.indicador-card {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 27px;
-    height: 27px;
-    border-radius: 50%;
-    background: #d2e8d9;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.card-prevencao[aria-expanded="true"] .indicador-card,
-.card-apoio[aria-expanded="true"] .indicador-card {
-    background: #a8d0b5;
-}
-
-/* BOTÃO DE DADOS */
-#abrir-dados {
-    display: inline-block;
-    padding: 15px 28px;
-    margin: 20px auto;
-    border: none;
-    border-radius: 30px;
-    background: linear-gradient(135deg, #477e68, #315b50);
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 5px 14px rgba(49, 91, 80, 0.2);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-#abrir-dados:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 9px 20px rgba(49, 91, 80, 0.3);
-}
-
-#abrir-dados:active {
-    transform: scale(0.96);
-}
-
-/* FOCO PELO TECLADO */
-#abrir-dados:focus-visible {
-    outline: 3px solid #8bbda0;
-    outline-offset: 4px;
-}
-
 /* RESPEITA QUEM PREFERE MENOS ANIMAÇÃO */
 @media (prefers-reduced-motion: reduce) {
+
     .card-prevencao,
     .card-apoio,
     .icone-prevencao,
@@ -349,88 +325,4 @@ main p {
         transition: none;
     }
 }
-
-/* ==========================================
-   DADOS E ESTATÍSTICAS - COMBATE
-========================================== */
-
-.secao-dados #abrir-dados {
-    position: static !important;
-
-    display: block !important;
-    width: fit-content !important;
-    height: auto !important;
-
-    margin: 20px auto !important;
-    padding: 15px 28px !important;
-
-    writing-mode: horizontal-tb !important;
-    text-orientation: mixed !important;
-
-    transform: none !important;
-    rotate: 0deg !important;
-    animation: none !important;
-
-    background: linear-gradient(135deg, #477e68, #315b50);
-    color: #ffffff;
-
-    border: none;
-    border-radius: 30px;
-
-    font-size: 16px;
-    font-weight: 700;
-
-    cursor: pointer;
-}
-
-/* BOTÃO DADOS E ESTATÍSTICAS */
-.secao-dados #abrir-dados {
-writing-mode: vertical-rl !important;
-transform: rotate(180deg) !important;
-
-    z-index: 9999 !important;
-
-    display: block !important;
-    width: auto !important;
-    height: auto !important;
-
-    padding: 14px 18px !important;
-
-    background: #1a1a1a !important;
-    color: #ffffff !important;
-
-    border: 1px solid #ffffff !important;
-    border-radius: 10px 0 0 10px !important;
-
-    writing-mode: horizontal-tb !important;
-    text-orientation: mixed !important;
-
-    transform: none !important;
-    rotate: none !important;
-    animation: none !important;
-
-    font-size: 15px !important;
-    font-weight: bold !important;
-
-    cursor: pointer;
-}
-
-/* BOTÃO FIXO EM TODOS OS TÓPICOS */
-#abrir-dados {
-    position: fixed !important;
-    right: 0 !important;
-    top: 50% !important;
-    z-index: 99999 !important;
-
-    writing-mode: vertical-rl !important;
-    text-orientation: mixed !important;
-    transform: translateY(-50%) rotate(180deg) !important;
-}
-
-/* FAZER O BOTÃO APARECER NO COMBATE */
-#abrir-dados {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    z-index: 99999 !important;
-}
+```
