@@ -1,10 +1,227 @@
-/* IMAGENS DA PÁGINA COMBATE */
-main img {
+
+/* ==========================================
+   COMBATE E PREVENÇÃO
+   Estilização exclusiva da página
+========================================== */
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* SEÇÕES */
+.combate-introducao,
+.secao-prevencao,
+.secao-apoio,
+.secao-escola,
+.secao-comunidade,
+.secao-imagem,
+.secao-dados {
+    margin: 35px 0;
+}
+
+/* TÍTULOS DAS SEÇÕES */
+main h2 {
+    text-align: center;
+    margin: 30px 0 18px;
+    color: #315b50;
+}
+
+/* TEXTOS */
+main p {
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 18px;
+}
+
+/* ==========================================
+   CARTÕES DE PREVENÇÃO E APOIO
+========================================== */
+
+/* GRADE DOS CARTÕES */
+.grade-prevencao,
+.grade-apoio {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin: 25px auto;
+}
+
+/* ITEM INDIVIDUAL */
+.item-card {
+    background: #ffffff;
+    border: 1px solid #dce9e3;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.item-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.11);
+}
+
+/* BOTÕES DOS CARTÕES */
+.card-prevencao,
+.card-apoio {
+    width: 100%;
+    min-height: 125px;
+    padding: 20px;
+    border: none;
+    background: #f0f7f3;
+    color: #294c41;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    font-family: inherit;
+    transition: background 0.2s ease;
+}
+
+.card-prevencao:hover,
+.card-apoio:hover {
+    background: #e1efe7;
+}
+
+/* FOCO PARA ACESSIBILIDADE */
+.card-prevencao:focus-visible,
+.card-apoio:focus-visible {
+    outline: 3px solid #315b50;
+    outline-offset: -3px;
+}
+
+/* ÍCONES */
+.icone-prevencao {
+    font-size: 30px;
+}
+
+/* TÍTULOS DOS CARTÕES */
+.titulo-card {
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* INDICADOR DE ABRIR E FECHAR */
+.indicador-card {
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/* INDICADOR QUANDO ABERTO */
+.card-prevencao[aria-expanded="true"] .indicador-card,
+.card-apoio[aria-expanded="true"] .indicador-card {
+    transform: rotate(45deg);
+}
+
+/* CONTEÚDO INTERNO DOS CARTÕES */
+.conteudo-card {
+    display: none;
+    padding: 20px;
+    background: #ffffff;
+    border-top: 1px solid #dce9e3;
+}
+
+/* MOSTRA O CONTEÚDO QUANDO O CARTÃO ESTÁ ABERTO */
+.card-prevencao[aria-expanded="true"] + .conteudo-card,
+.card-apoio[aria-expanded="true"] + .conteudo-card {
+    display: block;
+}
+
+.conteudo-card p {
+    margin: 0;
+    text-align: left;
+    font-size: 15px;
+    color: #444444;
+}
+
+/* ==========================================
+   MENSAGEM DE APOIO
+========================================== */
+
+.mensagem-apoio {
+    margin: 30px 0;
+    padding: 22px;
+    background: #f0f7f3;
+    border-left: 5px solid #6b9b83;
+    border-radius: 10px;
+}
+
+.mensagem-apoio p {
+    margin: 0;
+    text-align: center;
+    color: #315b50;
+}
+
+/* ==========================================
+   IMAGEM DA PÁGINA
+========================================== */
+
+.imagem-combate {
+    width: 100%;
+    max-width: 700px;
+    margin: 35px auto;
+}
+
+.imagem-combate img {
     display: block;
     width: 100%;
-    max-width: 520px;
+    max-width: 100%;
     height: auto;
     object-fit: contain;
-    margin: 30px auto;
-    border-radius: 10px;
+    margin: 0 auto;
+    border-radius: 14px;
+}
+
+/* ==========================================
+   DADOS E ESTATÍSTICAS
+========================================== */
+
+.secao-dados {
+    text-align: center;
+}
+
+.secao-dados p {
+    text-align: center;
+}
+
+/* ==========================================
+   RESPONSIVIDADE PARA CELULARES
+========================================== */
+
+@media (max-width: 600px) {
+
+    .grade-prevencao,
+    .grade-apoio {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card-prevencao,
+    .card-apoio {
+        min-height: 110px;
+    }
+
+    main h2 {
+        font-size: 21px;
+    }
+
+    main p {
+        font-size: 15px;
+    }
+
+    .imagem-combate {
+        max-width: 100%;
+    }
+
+    .mensagem-apoio {
+        padding: 17px;
+    }
 }
