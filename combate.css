@@ -414,3 +414,15 @@ transform: rotate(180deg) !important;
 
     cursor: pointer;
 }
+
+/* BOTÃO FIXO EM TODOS OS TÓPICOS */
+#abrir-dados {
+    position: fixed !important;
+    right: 0 !important;
+    top: 50% !important;
+    z-index: 99999 !important;
+
+    writing-mode: vertical-rl !important;
+    text-orientation: mixed !important;
+    transform: translateY(-50%) rotate(180deg) !important;
+}
