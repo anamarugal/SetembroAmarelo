@@ -350,14 +350,35 @@ main p {
     }
 }
 
-/* CORREÇÃO DO BOTÃO DADOS E ESTATÍSTICAS */
-#abrir-dados {
-    transform: none !important;
-    rotate: none !important;
+/* ==========================================
+   DADOS E ESTATÍSTICAS - COMBATE
+========================================== */
+
+.secao-dados #abrir-dados {
+    position: static !important;
+
+    display: block !important;
+    width: fit-content !important;
+    height: auto !important;
+
+    margin: 20px auto !important;
+    padding: 15px 28px !important;
+
     writing-mode: horizontal-tb !important;
+    text-orientation: mixed !important;
+
+    transform: none !important;
+    rotate: 0deg !important;
     animation: none !important;
-    position: static;
-    display: inline-block;
-    width: auto;
-    height: auto;
+
+    background: linear-gradient(135deg, #477e68, #315b50);
+    color: #ffffff;
+
+    border: none;
+    border-radius: 30px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
 }
