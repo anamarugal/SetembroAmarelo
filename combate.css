@@ -1,0 +1,10 @@
+/* IMAGENS DA PÁGINA COMBATE */
+main img {
+    display: block;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    object-fit: contain;
+    margin: 30px auto;
+    border-radius: 10px;
+}
