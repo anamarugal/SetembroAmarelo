@@ -1,125 +1,456 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Combate e Prevenção - Prevenção ao Suicídio</title>
+
     <link rel="stylesheet" href="style.css">
-    <script src="interacoes.js" defer> </script>
     <link rel="stylesheet" href="combate.css">
+
+    <script src="interacoes.js" defer></script>
+    <script src="combate.js" defer></script>
 </head>
 
 <body>
 
     <!-- TÍTULO PRINCIPAL -->
-    <h1>COMBATE E PREVENÇÃO</h1>
+    <header>
+        <h1>COMBATE E PREVENÇÃO</h1>
 
-    <button type="button" id="botao-fonte"
-            aria-pressed="false">
+        <button type="button" id="botao-fonte" aria-pressed="false">
             Ampliar texto
         </button>
-        
+    </header>
+
     <!-- MENU DE NAVEGAÇÃO -->
     <nav>
         <ul>
-            <a href="index.html">Principal</a>
-    <a href="problema.html">Problemas</a>
-    <a href="combate.html">Combate</a>
-    <a href="impactos.html">Impactos</a>
-    <a href="contato.html">Contato</a>
-    <a href="fontes.html">Fontes</a>
-    <a href="assistente.html"> Assistente Virtual </a>
+            <li><a href="index.html">Principal</a></li>
+            <li><a href="problema.html">Problemas</a></li>
+            <li><a href="combate.html">Combate</a></li>
+            <li><a href="impactos.html">Impactos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+            <li><a href="fontes.html">Fontes</a></li>
+            <li><a href="assistente.html">Assistente Virtual</a></li>
         </ul>
     </nav>
 
-    <!-- 1. FORMAS DE PREVENÇÃO -->
-    <h2>Como prevenir o suicídio?</h2>
-    <p>
-        A prevenção do suicídio envolve principalmente oferecer apoio, acolhimento e
-        atenção às pessoas que estão passando por momentos de sofrimento emocional. 
-        É importante criar espaços seguros para que elas possam falar sobre seus sentimentos sem medo de julgamentos, 
-        além de estar atento a mudanças de comportamento, isolamento e sinais de desesperança.
-        Buscar ajuda de profissionais, como psicólogos, psiquiatras e médicos, também é fundamental. 
-        O apoio da família, dos amigos, da escola e da comunidade pode fazer com que a pessoa se sinta acolhida e perceba que não está
-        sozinha. Além disso, campanhas de conscientização ajudam a combater o preconceito e incentivam a busca por ajuda. No Brasil, 
-        o CVV oferece apoio emocional gratuito pelo telefone 188, 24 horas por dia.
-    </p>
+    <main>
 
-    <!-- 2. ATITUDES QUE PODEM AJUDAR -->
-    <h2>Atitudes que podem ajudar nessa situação:</h2>
-    <p>
-        Existem diversas atitudes que podem ajudar a prevenir e combater o suicídio. 
-        Uma das principais é oferecer apoio e ouvir a pessoa com atenção, sem julgamentos ou críticas, mostrando que ela não está sozinha. 
-        Também é importante ficar atento a sinais de sofrimento emocional, como isolamento, tristeza intensa, desesperança e falas relacionadas 
-        à morte. Incentivar a busca por ajuda de profissionais, como psicólogos, psiquiatras e médicos, pode ser fundamental para que a pessoa 
-        receba o tratamento adequado. Além disso, manter uma rede de apoio formada por familiares, amigos e pessoas de confiança pode ajudar a 
-        diminuir a sensação de solidão. Combater o preconceito relacionado à saúde mental também é essencial, pois facilita a procura por ajuda. 
-        Dessa forma, conversar com respeito, acolher quem está sofrendo e buscar ajuda profissional são atitudes importantes para a 
-        prevenção do suicídio e para a valorização da vida.
-    </p>
+        <!-- INTRODUÇÃO -->
+        <section class="combate-introducao">
 
-    <!-- 4. ONDE BUSCAR APOIO? -->
-    <h2>Onde buscar apoio?</h2>
-    <div class="destaque-box">
-        <p>
-            Quando uma pessoa está sofrendo emocionalmente ou passando por pensamentos suicidas, é muito importante buscar ajuda e não enfrentar 
-            essa situação sozinha. Ela pode conversar com familiares, amigos, professores ou outra pessoa de confiança, 
-            compartilhando seus sentimentos e preocupações.
-        </p>
-        <p>
-            Também pode procurar ajuda de psicólogos, psiquiatras, médicos e outros profissionais da saúde, que estão preparados para oferecer orientação e tratamento. Serviços como os CAPS, UBS, UPAs e hospitais também podem ajudar em situações de sofrimento intenso.
-        </p>
-        <p>
-            <strong>No Brasil:</strong> O CVV oferece apoio emocional gratuito pelo telefone <strong>188</strong>, 24 horas por dia. Em situações de emergência ou risco imediato, ligue para o SAMU pelo número <strong>192</strong> ou procure um pronto-socorro.
-        </p>
-    </div>
+            <h2>Como prevenir o suicídio?</h2>
 
-    <!-- 5. COMO A ESCOLA PODE COLABORAR? -->
-    <h2>Como a escola pode colaborar?</h2>
-    <p>
-        A escola pode colaborar na prevenção e no combate ao suicídio criando um ambiente acolhedor, seguro e livre de preconceitos.
-        Professores e funcionários podem ficar atentos a mudanças de comportamento dos alunos, como isolamento, tristeza constante, queda 
-        no rendimento escolar ou sinais de sofrimento emocional. Também é importante promover conversas e atividades sobre saúde mental,
-        respeito, empatia e valorização da vida. A escola pode incentivar os estudantes a procurarem ajuda quando estiverem passando 
-        por dificuldades e encaminhá-los para profissionais especializados quando necessário. Além disso, combater o bullying e o 
-        preconceito é fundamental para evitar situações que possam aumentar o sofrimento dos alunos. Dessa forma, com informação, 
-        acolhimento, diálogo e apoio, a escola pode contribuir para que os estudantes se sintam mais seguros e percebam que não 
-        precisam enfrentar seus problemas sozinhos.
-    </p>
+            <p>
+                A prevenção do suicídio envolve principalmente oferecer apoio,
+                acolhimento e atenção às pessoas que estão passando por momentos
+                de sofrimento emocional. É importante criar espaços seguros para
+                que elas possam falar sobre seus sentimentos sem medo de julgamentos,
+                além de estar atento a mudanças de comportamento, isolamento e
+                sinais de desesperança.
 
-    <!-- 6. COMO ESTUDANTES, FAMÍLIAS ETC PODEM AGIR -->
-    <h2>Como estudantes, professores e familiares podem agir?</h2>
-    <p>
-        Estudantes, familiares e professores podem ajudar na prevenção do suicídio por meio do diálogo,
-        do acolhimento e da atenção aos sinais de sofrimento emocional. Os estudantes podem procurar pessoas de confiança quando estiverem
-        passando por dificuldades e também oferecer apoio aos colegas, sem julgamentos. Os familiares podem manter uma comunicação aberta, 
-        demonstrar carinho, ouvir com atenção e incentivar a busca por ajuda profissional quando necessário. Já os professores podem observar
-        mudanças no comportamento dos alunos, criar um ambiente de respeito e segurança e comunicar à família e à equipe responsável quando 
-        perceberem que um estudante precisa de ajuda. Todos devem evitar críticas e preconceitos e levar a sério qualquer 
-        demonstração de sofrimento. Com união, empatia e apoio, estudantes, familiares e professores podem contribuir para prevenir o suicídio e promover a valorização da vida.
-    </p>
+                Buscar ajuda de profissionais, como psicólogos, psiquiatras e médicos,
+                também é fundamental. O apoio da família, dos amigos, da escola e da
+                comunidade pode fazer com que a pessoa se sinta acolhida e perceba
+                que não está sozinha.
 
+                Além disso, campanhas de conscientização ajudam a combater o
+                preconceito e incentivam a busca por ajuda. No Brasil, o CVV oferece
+                apoio emocional gratuito pelo telefone 188.
+            </p>
 
+        </section>
 
+        <!-- ATITUDES DE PREVENÇÃO -->
+        <section class="secao-prevencao">
 
-   <img src="1fototds.png"
-     alt="Imagem"
-     style="width: 600px; height: auto;">
+            <h2>Atitudes que podem ajudar nessa situação</h2>
 
+            <p>
+                Existem diversas atitudes que podem ajudar na prevenção do suicídio.
+                Clique nos cartões abaixo para conhecer algumas delas.
+            </p>
 
-    
-    <button type="button" id="abrir-dados"
-        aria-expanded="false"
-        aria-controls="painel-dados">
-    Dados e estatísticas
-</button>
+            <div class="grade-prevencao">
 
-<div id="local-dados"></div>
+                <!-- CARTÃO 1 -->
+                <article class="item-card">
+
+                    <button type="button"
+                        class="card-prevencao"
+                        aria-expanded="false"
+                        aria-controls="prevencao-1">
+
+                        <span class="icone-prevencao">💛</span>
+                        <span class="titulo-card">Ouvir sem julgar</span>
+                        <span class="indicador-card">+</span>
+
+                    </button>
+
+                    <div class="conteudo-card" id="prevencao-1">
+                        <p>
+                            Ouvir alguém com atenção, respeito e empatia pode fazer
+                            toda a diferença. Permita que a pessoa fale sobre seus
+                            sentimentos sem críticas, interrupções ou julgamentos.
+                        </p>
+                    </div>
+
+                </article>
+
+                <!-- CARTÃO 2 -->
+                <article class="item-card">
+
+                    <button type="button"
+                        class="card-prevencao"
+                        aria-expanded="false"
+                        aria-controls="prevencao-2">
+
+                        <span class="icone-prevencao">👀</span>
+                        <span class="titulo-card">Observar os sinais</span>
+                        <span class="indicador-card">+</span>
+
+                    </button>
+
+                    <div class="conteudo-card" id="prevencao-2">
+                        <p>
+                            Mudanças de comportamento, isolamento, tristeza intensa
+                            e falas de desesperança podem indicar sofrimento emocional.
+                            Leve esses sinais a sério e ofereça apoio.
+                        </p>
+                    </div>
+
+                </article>
+
+                <!-- CARTÃO 3 -->
+                <article class="item-card">
+
+                    <button type="button"
+                        class="card-prevencao"
+                        aria-expanded="false"
+                        aria-controls="prevencao-3">
+
+                        <span class="icone-prevencao">🤝</span>
+                        <span class="titulo-card">Incentivar a busca por ajuda</span>
+                        <span class="indicador-card">+</span>
+
+                    </button>
+
+                    <div class="conteudo-card" id="prevencao-3">
+                        <p>
+                            Incentive a pessoa a procurar psicólogos, psiquiatras,
+                            médicos ou serviços de saúde. Ofereça ajuda para encontrar
+                            atendimento e acompanhá-la, se possível.
+                        </p>
+                    </div>
+
+                </article>
+
+                <!-- CARTÃO 4 -->
+                <article class="item-card">
+
+                    <button type="button"
+                        class="card-prevencao"
+                        aria-expanded="false"
+                        aria-controls="prevencao-4">
+
+                        <span class="icone-prevencao">🫂</span>
+                        <span class="titulo-card">Fortalecer a rede de apoio</span>
+                        <span class="indicador-card">+</span>
+
+                    </button>
+
+                    <div class="conteudo-card" id="prevencao-4">
+                        <p>
+                            Família, amigos, professores e pessoas de confiança
+                            podem formar uma rede de apoio importante. Demonstrar
+                            carinho e disponibilidade ajuda a diminuir a sensação
+                            de solidão.
+                        </p>
+                    </div>
+
+                </article>
+
+                <!-- CARTÃO 5 -->
+                <article class="item-card">
+
+                    <button type="button"
+                        class="card-prevencao"
+                        aria-expanded="false"
+                        aria-controls="prevencao-5">
+
+                        <span class="icone-prevencao">🌻</span>
+                        <span class="titulo-card">Combater o preconceito</span>
+                        <span class="indicador-card">+</span>
+
+                    </button>
+
+                    <div class="conteudo-card" id="prevencao-5">
+                        <p>
+                            Falar sobre saúde mental com respeito ajuda a combater
+                            o preconceito e torna mais fácil procurar ajuda quando
+                            alguém está passando por dificuldades.
+                        </p>
+                    </div>
+
+                </article>
+
+                <!-- CARTÃO 6 -->
+                <article class="item-card">
+
+                    <button type="button"
+                        class="card-prevencao"
+                        aria-expanded="false"
+                        aria-controls="prevencao-6">
+
+                        <span class="icone-prevencao">💬</span>
+                        <span class="titulo-card">Valorizar a vida</span>
+                        <span class="indicador-card">+</span>
+
+                    </button>
+
+                    <div class="conteudo-card" id="prevencao-6">
+                        <p>
+                            Incentivar o diálogo, o respeito, o acolhimento e o cuidado
+                            com a saúde emocional contribui para um ambiente em que
+                            todos possam se sentir importantes e acolhidos.
+                        </p>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- ONDE BUSCAR APOIO -->
+        <section class="secao-apoio">
+
+            <h2>Onde buscar apoio?</h2>
+
+            <p>
+                Quando uma pessoa está sofrendo emocionalmente ou passando por
+                pensamentos suicidas, é muito importante buscar ajuda e não
+                enfrentar essa situação sozinha.
+
+                Clique nos cartões para conhecer alguns serviços que podem ajudar.
+            </p>
+
+            <div class="grade-apoio">
+
+                <!-- UBS -->
+                <article class="item-card">
+
+                    <button type="button"
+                        class="card-apoio"
+                        aria-expanded="false"
+                        aria-controls="apoio-1">
+
+                        <span class="icone-prevencao">🏥</span>
+                        <span class="titulo-card">UBS</span>
+                        <span class="indicador-card">+</span>
+
+                    </button>
+
+                    <div class="conteudo-card" id="apoio-1">
+                        <p>
+                            A Unidade Básica de Saúde oferece atendimento inicial
+                            e orientação. Você pode procurar a UBS mais próxima
+                            para conversar com profissionais de saúde.
+                        </p>
+                    </div>
+
+                </article>
+
+                <!-- CAPS -->
+                <article class="item-card">
+
+                    <button type="button"
+                        class="card-apoio"
+                        aria-expanded="false"
+                        aria-controls="apoio-2">
+
+                        <span class="icone-prevencao">🧠</span>
+                        <span class="titulo-card">CAPS</span>
+                        <span class="indicador-card">+</span>
+
+                    </button>
+
+                    <div class="conteudo-card" id="apoio-2">
+                        <p>
+                            Os Centros de Atenção Psicossocial oferecem atendimento
+                            especializado em saúde mental, acolhimento e acompanhamento
+                            de pessoas em sofrimento psíquico.
+                        </p>
+                    </div>
+
+                </article>
+
+                <!-- CVV -->
+                <article class="item-card">
+
+                    <button type="button"
+                        class="card-apoio"
+                        aria-expanded="false"
+                        aria-controls="apoio-3">
+
+                        <span class="icone-prevencao">💛</span>
+                        <span class="titulo-card">CVV - 188</span>
+                        <span class="indicador-card">+</span>
+
+                    </button>
+
+                    <div class="conteudo-card" id="apoio-3">
+                        <p>
+                            O Centro de Valorização da Vida oferece apoio emocional
+                            gratuito pelo telefone 188, com atendimento 24 horas
+                            por dia. Em situações de sofrimento, você pode conversar
+                            com alguém.
+                        </p>
+                    </div>
+
+                </article>
+
+                <!-- EMERGÊNCIA -->
+                <article class="item-card">
+
+                    <button type="button"
+                        class="card-apoio"
+                        aria-expanded="false"
+                        aria-controls="apoio-4">
+
+                        <span class="icone-prevencao">🚑</span>
+                        <span class="titulo-card">Emergência - 192</span>
+                        <span class="indicador-card">+</span>
+
+                    </button>
+
+                    <div class="conteudo-card" id="apoio-4">
+                        <p>
+                            Em situações de risco imediato, procure uma UPA ou
+                            pronto-socorro ou ligue para o SAMU pelo número 192.
+                            Se possível, não deixe a pessoa sozinha enquanto
+                            busca ajuda.
+                        </p>
+                    </div>
+
+                </article>
+
+            </div>
+
+            <div class="mensagem-apoio">
+                <p>
+                    <strong>Você não precisa enfrentar tudo sozinho(a).</strong>
+                    Pedir ajuda é um ato de coragem. Sua vida importa e você
+                    merece cuidado, respeito e acolhimento.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- PAPEL DA ESCOLA -->
+        <section class="secao-escola">
+
+            <h2>Como a escola pode colaborar?</h2>
+
+            <p>
+                A escola pode colaborar na prevenção e no combate ao suicídio
+                criando um ambiente acolhedor, seguro e livre de preconceitos.
+
+                Professores e funcionários podem ficar atentos a mudanças de
+                comportamento dos alunos, como isolamento, tristeza constante,
+                queda no rendimento escolar ou sinais de sofrimento emocional.
+
+                Também é importante promover conversas e atividades sobre saúde
+                mental, respeito, empatia e valorização da vida. A escola pode
+                incentivar os estudantes a procurarem ajuda quando estiverem
+                passando por dificuldades e encaminhá-los para profissionais
+                especializados quando necessário.
+
+                Além disso, combater o bullying e o preconceito é fundamental
+                para evitar situações que possam aumentar o sofrimento dos alunos.
+                Dessa forma, com informação, acolhimento, diálogo e apoio, a escola
+                pode contribuir para que os estudantes se sintam mais seguros.
+            </p>
+
+        </section>
+
+        <!-- PAPEL DA FAMÍLIA E DOS ESTUDANTES -->
+        <section class="secao-comunidade">
+
+            <h2>Como estudantes, professores e familiares podem agir?</h2>
+
+            <p>
+                Estudantes, familiares e professores podem ajudar na prevenção
+                do suicídio por meio do diálogo, do acolhimento e da atenção aos
+                sinais de sofrimento emocional.
+
+                Os estudantes podem procurar pessoas de confiança quando estiverem
+                passando por dificuldades e também oferecer apoio aos colegas,
+                sem julgamentos.
+
+                Os familiares podem manter uma comunicação aberta, demonstrar
+                carinho, ouvir com atenção e incentivar a busca por ajuda
+                profissional quando necessário.
+
+                Já os professores podem observar mudanças no comportamento dos
+                alunos, criar um ambiente de respeito e segurança e comunicar
+                à família e à equipe responsável quando perceberem que um
+                estudante precisa de ajuda.
+
+                Todos devem evitar críticas e preconceitos e levar a sério
+                qualquer demonstração de sofrimento. Com união, empatia e apoio,
+                podemos contribuir para a prevenção do suicídio e a valorização
+                da vida.
+            </p>
+
+        </section>
+
+        <!-- IMAGEM -->
+        <section class="secao-imagem">
+
+            <figure class="imagem-combate">
+                <img
+                    src="1fototds.png"
+                    alt="Imagem ilustrativa do projeto de combate e prevenção ao suicídio">
+            </figure>
+
+        </section>
+
+        <!-- DADOS E ESTATÍSTICAS -->
+        <section class="secao-dados">
+
+            <h2>Conheça os dados e estatísticas</h2>
+
+            <p>
+                A informação também é uma ferramenta importante para a prevenção.
+                Consulte os dados e conheça mais sobre o tema.
+            </p>
+
+            <button type="button"
+                id="abrir-dados"
+                aria-expanded="false"
+                aria-controls="painel-dados">
+
+                Dados e estatísticas
+
+            </button>
+
+            <div id="local-dados"></div>
+
+        </section>
+
+    </main>
 
     <!-- RODAPÉ -->
     <footer>
-        <p>Projeto escolar sobre prevenção ao suicídio e valorização da vida.</p>
+        <p>
+            Projeto escolar sobre prevenção ao suicídio e valorização da vida.
+        </p>
     </footer>
 
 </body>
