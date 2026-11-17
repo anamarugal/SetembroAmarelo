@@ -386,12 +386,11 @@ main p {
 /* BOTÃO DADOS E ESTATÍSTICAS */
 .secao-dados #abrir-dados {
     position: fixed !important;
-    right: 10px !important;
+    right: 0 !important;
     top: 40% !important;
     left: auto !important;
-    bottom: auto !important;
 
-    z-index: 1000 !important;
+    z-index: 9999 !important;
 
     display: block !important;
     width: auto !important;
@@ -399,12 +398,21 @@ main p {
 
     padding: 14px 18px !important;
 
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+
+    border: 1px solid #ffffff !important;
+    border-radius: 10px 0 0 10px !important;
+
     writing-mode: horizontal-tb !important;
     text-orientation: mixed !important;
+
     transform: none !important;
     rotate: none !important;
     animation: none !important;
 
-    border-radius: 12px;
-    box-sizing: border-box;
+    font-size: 15px !important;
+    font-weight: bold !important;
+
+    cursor: pointer;
 }
