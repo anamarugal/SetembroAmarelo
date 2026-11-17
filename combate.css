@@ -385,11 +385,8 @@ main p {
 
 /* BOTÃO DADOS E ESTATÍSTICAS */
 .secao-dados #abrir-dados {
-   position: fixed !important;
-right: 0 !important;
-top: 40% !important;
-left: auto !important;
-bottom: auto !important;
+writing-mode: vertical-rl !important;
+transform: rotate(180deg) !important;
 
     z-index: 9999 !important;
 
