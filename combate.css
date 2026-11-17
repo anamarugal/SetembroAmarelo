@@ -386,7 +386,7 @@ main p {
 /* BOTÃO DADOS E ESTATÍSTICAS */
 .secao-dados #abrir-dados {
 writing-mode: vertical-rl !important;
-transform: no rotate(180deg) !important;
+transform: rotate(180deg) !important;
 
     z-index: 9999 !important;
 
