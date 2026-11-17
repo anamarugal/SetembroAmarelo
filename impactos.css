@@ -1,27 +1,27 @@
 /* ==========================================
    IMAGEM DA PÁGINA IMPACTOS
-   Mesmo padrão da página Combate
 ========================================== */
 
-.imagem-impactos {
+figure.imagem-impactos {
+    display: block;
     width: 100%;
-    max-width: 400px;
+    max-width: 280px;
     margin: 35px auto;
 }
 
-.imagem-impactos img {
+figure.imagem-impactos img {
     display: block;
     width: 100%;
-    max-width: 100%;
     height: auto;
+    max-width: 100%;
     object-fit: contain;
-    margin: 0 auto;
     border-radius: 14px;
 }
 
 /* RESPONSIVIDADE */
 @media (max-width: 600px) {
-    .imagem-impactos {
-        max-width: 100%;
+    figure.imagem-impactos {
+        max-width: 280px;
+        width: calc(100% - 30px);
     }
 }
