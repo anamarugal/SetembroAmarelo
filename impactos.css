@@ -3,31 +3,35 @@
 ========================================== */
 
 .secao-imagem {
-    width: 100%;
-    margin: 35px auto;
     display: flex;
     justify-content: center;
-}
-
-.imagem-impactos {
-    display: block;
-    width: 350px;
-    max-width: calc(100vw - 40px);
-    margin: 0 auto;
-}
-
-.imagem-impactos img {
-    display: block;
+    align-items: center;
     width: 100%;
-    height: auto;
+    margin: 35px auto;
+}
+
+figure.imagem-impactos {
+    display: block;
+    width: 350px !important;
+    max-width: calc(100% - 20px) !important;
+    margin: 0 auto;
+    padding: 0;
+}
+
+figure.imagem-impactos img {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
     object-fit: contain;
     border-radius: 14px;
+    margin: 0 auto;
 }
 
 /* RESPONSIVIDADE */
 @media (max-width: 600px) {
-    .imagem-impactos {
-        width: 100%;
-        max-width: 350px;
+    figure.imagem-impactos {
+        width: 100% !important;
+        max-width: 350px !important;
     }
 }
