@@ -10,7 +10,6 @@ fontes.html - criado
 <!--  DEPOIS CRIAR ESSES:  -->
 css/estilo.css
 js/interacoes.js
-imagens/
 
 <!-- Aqui fica as nossas anotações e o que cada membro fez -->
  ana criou os arquivos em html
