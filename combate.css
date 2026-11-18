@@ -21,7 +21,7 @@ main {
 }
 
 main h2 {
-    text-align: justify;
+    position: relative;
     margin: 30px 0 18px;
     color: #000000;
 }
